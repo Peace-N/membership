@@ -10,6 +10,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Unique;
+use Illuminate\Database\Eloquent\Builder;
+
 
 class ProductResource extends Resource
 {
@@ -24,6 +26,14 @@ class ProductResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Section::make([
+                    Forms\Components\Toggle::make('is_managed')
+                    ->label(__('Managed product'))
+                    ->helperText(__('Mark this product as managed. This will make product managed on checkout, product is self-mnaged byy default.')),
+                    Forms\Components\Select::make('category_id')
+                    // only products with is_default = false can be selected
+                    ->relationship('category', 'name', modifyQueryUsing: fn (Builder $query) => $query->where('portal', '!=', ''))
+                    ->required()
+                    ->preload(),
                     Forms\Components\TextInput::make('name')
                         ->required()
                         ->maxLength(255),
@@ -78,6 +88,9 @@ class ProductResource extends Resource
             ->heading(__('A product is bundle of features that you offer to your customers.'))
             ->description(__('If you want to provide a Starter, Pro and Premium offerings to your customers, create a product for each of them.'))
             ->columns([
+                Tables\Columns\IconColumn::make('is_managed')->label(__('Managed'))->boolean(),
+                Tables\Columns\TextColumn::make('category.name')
+                ->label(__('Category')),
                 Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('slug')->searchable()->sortable(),
                 Tables\Columns\IconColumn::make('is_popular')->label(__('Popular'))->boolean(),

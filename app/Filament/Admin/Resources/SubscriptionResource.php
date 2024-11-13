@@ -19,6 +19,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 use Illuminate\Support\HtmlString;
 
 class SubscriptionResource extends Resource
@@ -77,7 +78,8 @@ class SubscriptionResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('user.name')->label(__('User'))->searchable(),
+                Tables\Columns\TextColumn::make('plan.product.category.name')->label(__('Product'))->searchable(),
+                Tables\Columns\TextColumn::make('user.name')->label(__('Customer'))->searchable(),
                 Tables\Columns\TextColumn::make('plan.name')->label(__('Plan'))->searchable(),
                 Tables\Columns\TextColumn::make('price')->formatStateUsing(function (string $state, $record) {
                     $interval = $record->interval->name;
@@ -106,15 +108,34 @@ class SubscriptionResource extends Resource
                 Tables\Columns\TextColumn::make('created_at')->label(__('Created At'))
                     ->dateTime(config('app.datetime_format'))
                     ->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('updated_at')->label(__('Updated At'))
-                    ->dateTime(config('app.datetime_format'))
-                    ->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('employee.name')->label(__('Assigned'))->searchable(),
+                // Tables\Columns\TextColumn::make('updated_at')->label(__('Updated At'))
+                //     ->dateTime(config('app.datetime_format'))
+                //     ->searchable()->sortable(),
 
             ])
             ->filters([
                 //
             ])
             ->actions([
+
+                Tables\Actions\Action::make('Assign')
+                ->fillForm(fn (Subscription $record): array => [
+                    'employee_id' => $record->user->id,
+                ])
+                ->form([
+                    Forms\Components\Select::make('employee_id')
+                        ->label('Assigned Employee')
+                        ->options(User::role('employee')->pluck('name', 'id'))
+                        ->required(),
+                ])
+                ->action(function (array $data, Subscription $record): void {
+                    $record->employee_id = $data['employee_id'];
+                    $record->save();
+                })
+                ->button()
+                ->icon('heroicon-o-user-plus')
+                ->slideOver()                ,
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
             ])

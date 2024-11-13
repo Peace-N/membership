@@ -27,9 +27,10 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->brandLogo(asset('images/logo-dark.png'))
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Gray,
             ])
             ->userMenuItems([
                 MenuItem::make()
@@ -66,7 +67,11 @@ class AdminPanelProvider extends PanelProvider
             ->navigationGroups([
                 NavigationGroup::make()
                     ->label('Revenue')
-                    ->icon('heroicon-s-rocket-launch')
+                    ->icon('heroicon-o-document-chart-bar')
+                    ->collapsed(),
+                    NavigationGroup::make()
+                    ->label('Product Categories')
+                    ->icon('heroicon-c-qr-code')
                     ->collapsed(),
                 NavigationGroup::make()
                     ->label('Product Management')
@@ -74,7 +79,7 @@ class AdminPanelProvider extends PanelProvider
                     ->collapsed(),
                 NavigationGroup::make()
                     ->label('User Management')
-                    ->icon('heroicon-s-users')
+                    ->icon('heroicon-o-user-circle')
                     ->collapsed(),
                 NavigationGroup::make()
                     ->label('Settings')

@@ -47,6 +47,12 @@ class Subscription extends Model
         return $this->belongsTo(User::class);
     }
 
+
+    public function employee(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'employee_id');
+    }
+
     public function plan(): BelongsTo
     {
         return $this->belongsTo(Plan::class);

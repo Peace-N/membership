@@ -27,8 +27,9 @@ class DashboardPanelProvider extends PanelProvider
         return $panel
             ->id('dashboard')
             ->path('dashboard')
+            ->brandLogo(asset('images/logo-dark.png'))
             ->colors([
-                'primary' => Color::Teal,
+                'primary' => Color::Gray,
             ])
             ->userMenuItems([
                 MenuItem::make()

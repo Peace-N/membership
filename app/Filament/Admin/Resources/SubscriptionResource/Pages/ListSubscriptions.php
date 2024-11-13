@@ -25,6 +25,7 @@ class ListSubscriptions extends ListRecords
     public function getTabs(): array
     {
         return [
+
             'all' => Tab::make(),
             'active' => Tab::make()
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('status', SubscriptionStatus::ACTIVE)),
@@ -36,6 +37,15 @@ class ListSubscriptions extends ListRecords
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('status', SubscriptionStatus::CANCELED)),
             'past Due' => Tab::make()
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('status', SubscriptionStatus::PAST_DUE)),
-        ];
+            'asssigned customers' => Tab::make()
+                ->modifyQueryUsing(fn (Builder $query) => $query->where('employee_id', '!=', null)),
+            'orphaned customers' => Tab::make()
+            ->modifyQueryUsing(fn (Builder $query) => $query->where('employee_id', '=', '')),
+            'self managed subscriptions' => Tab::make()
+            ->modifyQueryUsing(fn (Builder $query) => $query->where('product.is_managed', 0)),
+            'managed subscriptions' => Tab::make()
+            ->modifyQueryUsing(fn (Builder $query) => $query->where('product.is_managed', 1)),
+        ]
+        ;
     }
 }

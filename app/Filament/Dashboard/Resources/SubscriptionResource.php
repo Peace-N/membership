@@ -66,6 +66,12 @@ class SubscriptionResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\Action::make('manage')
+                ->label(__('Access Service'))
+                ->icon('heroicon-s-arrow-right-circle')
+                ->color('success')
+                ->button()
+                ->url(fn (Subscription $record): string => SubscriptionResource::getUrl('cancel', ['record' => $record->uuid])),
                 Tables\Actions\ActionGroup::make([
                     Tables\Actions\ViewAction::make()
                         ->label(__('View Details')),
@@ -85,7 +91,10 @@ class SubscriptionResource extends Resource
                         ->action(function ($record, DiscardSubscriptionCancellationActionHandler $handler) {
                             $handler->handle($record);
                         })->visible(fn (Subscription $record): bool => $record->is_canceled_at_end_of_cycle && $record->status === SubscriptionStatus::ACTIVE->value),
-                ]),
+                ])->label('Manage')
+                ->icon('heroicon-m-ellipsis-vertical')
+                ->color('primary')
+                ->button()
             ])
             ->bulkActions([
             ]);
@@ -113,7 +122,7 @@ class SubscriptionResource extends Resource
 
     public static function getEloquentQuery(): Builder
     {
-        return parent::getEloquentQuery()->where('user_id', auth()->user()->id);
+        return parent::getEloquentQuery()->where('user_id', auth()->user()->id)->orWhere('employee_id', auth()->user()->id);
     }
 
     public static function canCreate(): bool
@@ -244,5 +253,13 @@ class SubscriptionResource extends Resource
     public static function isDiscovered(): bool
     {
         return app()->make(ConfigManager::class)->get('app.customer_dashboard.show_subscriptions', true);
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        if(auth()->user()->role('employee')) {
+            return __('Client Services');
+        }
+        return __('Subscriptions');
     }
 }
