@@ -12,6 +12,7 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
+        'is_managed',
         'name',
         'description',
         'slug',

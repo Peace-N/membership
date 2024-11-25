@@ -1,22 +1,94 @@
-<footer class="bg-black text-white mt-12">
-    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+<x-section.columns class="max-w-full w-full mt-6  p-10" style="background: rgba(229,235,255,0.4); border-bottom: 1px solid #ccc;">
+    <div class="mx-auto text-center px-4">
+        <p class="text-primary-900">Need help? Find help in our knowledgebase or simply chat to us .</p>
+    </div>
+</x-section.columns>
+<x-section.columns class="max-w-full w-full   p-6" >
+    <div class="mx-auto text-center px-4">
+        <p class="text-primary-900"><small><strong>Wurk and its subsidiaries are registered services provider.</strong></small></p>
+    </div>
+</x-section.columns>
+
+<footer class="bg-black text-white">
+    <div class="mx-auto w-full mx-auto px-20 p-4 py-8 lg:py-8">
+        <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+                <ul class="flex flex-col text-sm mt-2 mb-2">
+                    <li class="text-sm mb-1 text-gray-300"><a href="#">About Wurk</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('About us') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Careers') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Contact us') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Wurk Blog') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Legal') }}</a></li>
+
+                </ul>
+            </div>
+
+            <div class="mb-6 md:mb-0">
+                <ul class="flex flex-col text-sm mt-2 mb-2">
+                    <li class="text-sm mb-1 text-gray-300"><a href="#">Support@Wurk</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Product Support') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Abuse') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Reources') }}</a></li>
+
+                </ul>
+            </div>
+
+            <div class="mb-6 md:mb-0">
+                <ul class="flex flex-col text-sm mt-2 mb-2">
+                    <li class="text-sm mb-1 text-gray-300"><a href="#">Resources</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Documentations') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('API') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Developers') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('WHOIS') }}</a></li>
+                </ul>
+            </div>
+
+            <div class="mb-6 md:mb-0">
+                <ul class="flex flex-col text-sm mt-2 mb-2">
+                    <li class="text-sm mb-1 text-gray-300"><a href="#">Partner Programmes</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Affiliates') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Resellers') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Member Benefits') }}</a></li>
+                </ul>
+            </div>
+
+            <div class="mb-6 md:mb-0">
+                <ul class="flex flex-col text-sm mt-2 mb-2">
+                    <li class="text-sm mb-1 text-gray-300"><a href="#">Account</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('My Products') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Billing & Subscriptions') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Become a Member') }}</a></li>
+                </ul>
+            </div>
+
+            <div class="mb-6 md:mb-0">
+                <ul class="flex flex-col text-sm mt-2 mb-2">
+                    <li class="text-sm mb-1 text-gray-300"><a href="#">Shopping</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Buy a Domain') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Crete a Website') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Logo Generator') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Business Cards Maker') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Create Business Profile') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Create Business Plan') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Create Business Proposal') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('CRM') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Accounting & Invoicing') }}</a></li>
+                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Project Management') }}</a></li>
+                </ul>
+            </div>
+
+
+
+
+
+        </div>
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="/" class="flex items-center">
                     <img src="{{asset(config('app.logo.light') )}}" class="h-6 me-3" alt="Logo" />
                 </a>
             </div>
-            <ul class="flex flex-wrap gap-6 text-primary-100 dark:text-gray-400 text-sm mt-2">
-                <li class="mb-4">
-                    <a href="{{route('blog')}}" class="text-primary-100 hover:text-primary-50">{{ __('Blog') }}</a>
-                </li>
-                <li class="mb-4">
-                    <a href="{{route('privacy-policy')}}" class="text-primary-100 hover:text-primary-50">{{ __('Privacy Policy') }}</a>
-                </li>
-                <li>
-                    <a href="{{route('terms-of-service')}}" class="text-primary-100 hover:hover:text-primary-50">{{ __('Terms of Service') }}</a>
-                </li>
-            </ul>
         </div>
         <hr class="my-6 border-primary-300 sm:mx-auto lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
@@ -35,9 +107,10 @@
                 @if (!empty(config('app.social_links.x')))
                     <x-link.social-icon name="x" title="{{ __('Twitter page') }}" link="{{config('app.social_links.x')}}" class="text-primary-100 border-primary-200 hover:text-primary-50"/>
                 @endif
-                @if (!empty(config('app.social_links.linkedin')))
+{{--                @if (!empty(config('app.social_links.linkedin')))--}}
                     <x-link.social-icon name="linkedin" title="{{ __('Linkedin page') }}" link="{{config('app.social_links.linkedin')}}" class="text-primary-100 border-primary-200 hover:text-primary-50"/>
-                @endif
+{{--                    <x-link.social-icon name="linkedin" title="{{ __('Linkedin page') }}" link="{{config('app.social_links.linkedin')}}" class="text-primary-100 border-primary-200 hover:text-primary-50"/>--}}
+{{--                @endif--}}
                 @if (!empty(config('app.social_links.github')))
                     <x-link.social-icon name="github" title="{{ __('Github page') }}" link="{{config('app.social_links.github')}}" class="text-primary-100 border-primary-200 hover:text-primary-50"/>
                 @endif

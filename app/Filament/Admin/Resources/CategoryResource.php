@@ -8,6 +8,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Unique;
 
@@ -24,6 +25,10 @@ class CategoryResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Section::make([
+                    Forms\Components\FileUpload::make('image')
+                        ->image()
+                        ->uploadingMessage('Uploading Product image...')
+                        ->imageEditor(),
                     Forms\Components\TextInput::make('name')
                         ->required()
                         ->maxLength(255),
@@ -39,6 +44,8 @@ class CategoryResource extends Resource
             ->heading(__('A Product category is the high level categorisation of all wurk products'))
             ->description(__('An example a Product Website Pro can reside in a Website Category'))
             ->columns([
+                Tables\Columns\ImageColumn::make('image')->square(),
+                Tables\Columns\IconColumn::make('icon')->icon(static fn (Model $record): string|null => $record->icon),
                 Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('portal')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('updated_at')

@@ -145,15 +145,15 @@ Route::get('/roadmap/suggest', [
     'suggest',
 ])->name('roadmap.suggest')->middleware('auth');
 
-Route::get('/roadmap', [
+Route::get('/pricing', [
     App\Http\Controllers\RoadmapController::class,
     'index',
-])->name('roadmap');
+])->name('pricing');
 
-Route::get('/roadmap/i/{itemSlug}', [
+Route::get('/pricing/i/{product}', [
     App\Http\Controllers\RoadmapController::class,
-    'viewItem',
-])->name('roadmap.viewItem');
+    'item',
+])->name('pricing.item');
 
 // Invoice
 

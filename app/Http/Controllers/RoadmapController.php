@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+
 class RoadmapController extends Controller
 {
     public function index()
@@ -11,12 +13,14 @@ class RoadmapController extends Controller
         return view('roadmap.index');
     }
 
-    public function viewItem(string $itemSlug)
+    public function item(Product $product)
     {
-        $this->assertRoadmapEnabled();
+//        $this->assertRoadmapEnabled();
+        $slugs = [$product->slug];
 
-        return view('roadmap.view', [
-            'slug' => $itemSlug,
+        return view('plans.index', [
+            'product' => $slugs,
+            'desc' => $product,
         ]);
 
     }

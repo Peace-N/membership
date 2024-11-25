@@ -6,7 +6,7 @@
     <x-section.hero class="w-full mb-8 md:mb-72">
 
         <div class="mx-auto text-center h-160 md:h-180 px-4">
-            <x-pill class="text-primary-500 bg-primary-50">{{ __('Launch your Business') }}</x-pill>
+            <x-pill class="text-primary-500 bg-primary-50">{{ __('Automate Your Business with Wurk') }}</x-pill>
             <x-heading.h1 class="mt-4 text-primary-50 font-bold">
                 {{ __('Popular Services picked for you') }}
                 <br class="hidden sm:block">
@@ -15,278 +15,178 @@
             </x-heading.h1>
 
             <div class="mx-4">
-                <x-tab-slider class="mt-6 md:max-w-6xl py-8 rounded-2xl">
+                <x-tab-slider class="mx-auto w-full mx-auto px-20 p-4 py-8 lg:py-8 rounded-2xl">
                     <x-slot name="tabNames">
-                        <x-tab-slider.tab-name controls="tab-1" active="true">{{ __('Recommended') }}</x-tab-slider.tab-name>
-                        <x-tab-slider.tab-name controls="tab-2">{{ __('Design Services') }}</x-tab-slider.tab-name>
-                        <x-tab-slider.tab-name controls="tab-3">{{ __('Websites') }}</x-tab-slider.tab-name>
-                        <x-tab-slider.tab-name controls="tab-4">{{ __('Business Process') }}</x-tab-slider.tab-name>
-                        <x-tab-slider.tab-name controls="tab-5">{{ __('Logo Design') }}</x-tab-slider.tab-name>
-                        <x-tab-slider.tab-name controls="tab-6">{{ __('Domains') }}</x-tab-slider.tab-name>
-                        <x-tab-slider.tab-name controls="tab-7">{{ __('and more') }}</x-tab-slider.tab-name>
+                        <livewire:show-home-tabs />
                     </x-slot>
 
-                    <x-tab-slider.tab-content id="tab-1">
-                        <div class="text-center mt-8">
-                            <x-heading.h4 class="text-primary-900 !font-semibold">
-                                {{ __('Customer Success Journey') }}
-                            </x-heading.h4>
-
-                            <div class="mx-auto max-w-2xl">
-                                <p class="mt-4">
-                                    {{ __('Our Journey at WUrk has been a fantastic one, from utomated services to managed, we embrked on a journey to create our Logos, Proposals and eventually Funding. Simply Awesome. NYL - Photography') }}
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="m-10 mx-auto max-w-4xl mt-12">
-                            <img src="{{URL::asset('/images/features/bliss.jpg')}}" class="drop-shadow-xl rounded-2xl" />
-                        </div>
-
-                    </x-tab-slider.tab-content>
-
-                    <x-tab-slider.tab-content id="tab-2">
-                        <div class="text-center mt-8">
-                            <x-heading.h4 class="text-primary-900 !font-semibold">
-                                {{ __('Plans & Pricing Component') }}
-                            </x-heading.h4>
-
-                            <div class="mx-auto max-w-2xl">
-                                <p class="mt-4">
-                                    {{ __('This component is magical in that it will read the plans you defined in your admin panel, group them, calculate potential discount amount if user chooses a longer plan, and display all that in a beautiful way for your users. ') }}
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="m-10 mx-auto max-w-4xl mt-12">
-                            <img src="{{URL::asset('/images/features/plans-component.png')}}" class="drop-shadow-xl rounded-2xl" />
-                        </div>
-
-                    </x-tab-slider.tab-content>
-
-                    <x-tab-slider.tab-content id="tab-3">
-                        <div class="text-center mt-8">
-                            <x-heading.h4 class="text-primary-900 !font-semibold">
-                                {{ __('Hero section Component') }}
-                            </x-heading.h4>
-
-                            <div class="mx-auto max-w-2xl">
-                                <p class="mt-4">
-                                    {{ __('A ready-to-use hero section component to display your hero image, title, and call to action button.') }}
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="m-10 mx-auto max-w-4xl mt-12">
-                            <img src="{{URL::asset('/images/features/hero-component.png')}}" class="drop-shadow-xl rounded-2xl" />
-                        </div>
-
-                    </x-tab-slider.tab-content>
-
-                    <x-tab-slider.tab-content id="tab-4">
-                        <div class="text-center mt-8">
-                            <x-heading.h4 class="text-primary-900 !font-semibold">
-                                {{ __('FAQ Component') }}
-                            </x-heading.h4>
-
-                            <div class="mx-auto max-w-2xl">
-                                <p class="mt-4">
-                                    {{ __('An accordion component that you can use to display your FAQ in an intuitive way.') }}
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="m-10 mx-auto max-w-4xl mt-12">
-                            <img src="{{URL::asset('/images/features/faqs-component.png')}}" class="drop-shadow-xl rounded-2xl" />
-                        </div>
-
-                    </x-tab-slider.tab-content>
-
-                    <x-tab-slider.tab-content id="tab-5">
-                        <div class="text-center mt-8">
-                            <x-heading.h4 class="text-primary-900 !font-semibold">
-                                {{ __('Call to action component') }}
-                            </x-heading.h4>
-
-                            <div class="mx-auto max-w-2xl">
-                                <p class="mt-4">
-                                    {{ __('A focused component the brings attention to your call to action.') }}
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="m-10 mx-auto max-w-4xl mt-12">
-                            <img src="{{URL::asset('/images/features/call-to-action-component.png')}}" class="drop-shadow-xl rounded-2xl">
-                        </div>
-
-                    </x-tab-slider.tab-content>
-
-                    <x-tab-slider.tab-content id="tab-6">
-                        <div class="text-center mt-8">
-                            <x-heading.h4 class="text-primary-900 !font-semibold">
-                                {{ __('Tab Slider Component') }}
-                            </x-heading.h4>
-
-                            <div class="mx-auto max-w-2xl">
-                                <p class="mt-4">
-                                    {{ __('Tab slider component displays your content in a beautiful and organized way into separate tabs.') }}
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="m-10 mx-auto max-w-4xl mt-12">
-                            <img src="{{URL::asset('/images/features/tab-slider-component.png')}}" class="drop-shadow-xl rounded-2xl">
-                        </div>
-
-                    </x-tab-slider.tab-content>
-
-                    <x-tab-slider.tab-content id="tab-7">
-
-                        <div class="m-10 mx-auto max-w-4xl mt-6">
-                            <x-section.columns class="max-w-none md:max-w-6xl mt-6">
-                                <x-section.column class="flex flex-col items-center justify-center text-center">
-                                    <x-icon.fancy name="nav" class="w-2/5 mx-auto" type="secondary" />
-                                    <x-heading.h3 class="mx-auto pt-2">
-                                        {{ __('Header & Footer') }}
-                                    </x-heading.h3>
-                                    <p class="mt-2">{{ __('Easily customize your header and footer.') }}</p>
-                                </x-section.column>
-
-                                <x-section.column class="flex flex-col items-center justify-center text-center">
-                                    <x-icon.fancy name="button-ok" class="w-2/5 mx-auto" type="secondary" />
-                                    <x-heading.h3 class="mx-auto pt-2">
-                                        {{ __('Buttons') }}
-                                    </x-heading.h3>
-                                    <p class="mt-2">{{ __('Beautiful buttons to use in your application.') }}</p>
-                                </x-section.column>
-
-                                <x-section.column class="flex flex-col items-center justify-center text-center">
-                                    <x-icon.fancy name="pill" class="w-2/5 mx-auto" type="secondary" />
-                                    <x-heading.h3 class="mx-auto pt-2">
-                                        {{ __('Pill') }}
-                                    </x-heading.h3>
-                                    <p class="mt-2">{{ __('Pills to highlight your content where you need to.') }}</p>
-                                </x-section.column>
-
-                            </x-section.columns>
-
-                            <p class="text-center mt-4">
-                                {{ __('and much more...') }}
-                            </p>
-                        </div>
-
-                    </x-tab-slider.tab-content>
-
-
+                        <livewire:show-home-tabs-content />
 
                 </x-tab-slider>
             </div>
 
 
-            {{-- <p class="text-primary-50 m-3">{{ __('A Laravel-based boilerplate with everything you need to build an awesome SaaS.') }}</p> --}}
-{{--
-            <div class="flex flex-wrap gap-4 justify-center flex-col md:flex-row mt-6">
-                <x-effect.glow></x-effect.glow>
-
-                <x-button-link.secondary href="#pricing" class="self-center !py-3" elementType="a">
-                    {{ __('Get SaaSykit') }}
-                </x-button-link.secondary>
-                <x-button-link.primary-outline href="//demo.saasykit.com" class=" bg-transparent self-center !py-3 text-white border-white" rel=”nofollow” >
-                    {{ __('Check The Demo') }}
-                </x-button-link.primary-outline>
-
-            </div>
-
-            <x-user-ratings link="#testimonials" class="items-center justify-center mt-6 relative z-40">
-                <x-slot name="avatars">
-                    <x-user-ratings.avatar src="https://unsplash.com/photos/rDEOVtE7vOs/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fHx8MTcxMzY4NDI1MHww&force=true&w=640" alt="testimonial 1"/>
-                    <x-user-ratings.avatar src="https://unsplash.com/photos/c_GmwfHBDzk/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8cGVyc29ufGVufDB8fHx8MTcxMzY4NDI1MHww&force=true&w=640" alt="testimonial 2"/>
-                    <x-user-ratings.avatar src="https://unsplash.com/photos/QXevDflbl8A/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NHx8cGVyc29ufGVufDB8fHx8MTcxMzY4NDI1MHww&force=true&w=640" alt="testimonial 3"/>
-                    <x-user-ratings.avatar src="https://unsplash.com/photos/mjRwhvqEC0U/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fHx8MTcxMzY4NDI1MHww&force=true&w=640" alt="testimonial 4"/>
-                    <x-user-ratings.avatar src="https://unsplash.com/photos/C8Ta0gwPbQg/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTl8fHBlcnNvbnxlbnwwfHx8fDE3MTM2ODQyNTB8MA&force=true&w=640" alt="testimonial 5"/>
-                </x-slot>
-
-                {{ __('Join the best SaaS developers who are using SaaSykit to build their SaaS.') }}
-            </x-user-ratings> --}}
-
-            {{-- <div class="mx-auto md:max-w-3xl lg:max-w-5xl">
-                <img class="drop-shadow-2xl mt-8 transition hover:scale-101 rounded-2xl" src="{{URL::asset('/images/features/hero-image.png')}}" />
-            </div> --}}
-
         </div>
     </x-section.hero>
 
+{{--More Services--}}
+    <div class="mx-auto text-center px-4">
+        <x-heading.h2 class="text-primary-900">Grow you brand with Wurk. Pick a service</x-heading.h2>
+    </div>
     <x-section.columns class="max-w-none md:max-w-6xl pt-16" id="features">
-        <x-section.column>
+        <x-section.column  style="flex-basis: inherit;padding: 0.75rem;">
+            <div
+                class="flex w-full flex-col rounded-2xl bg-cover px-[30px] py-[30px] md:px-[64px]"
+                style='background: radial-gradient(#e0f3fd, #d4e9f7); height: 100%'
+            >
+                <div class="w-full">
+                    <h4 class="mb-[14px] max-w-full text-xl font-bold text-black md:text-3xl md:leading-[42px] ">
+                        Discover, collect, and sell extraordinary NFTs
+                    </h4>
+                    <p class="mb-[40px] max-w-full text-base font-medium text-[#696969] ">
+                        Enter in this creative world. Discover now the latest NFTs or start
+                        creating your own!
+                    </p>
+                    <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
+                        <button class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                            Discover now
+                        </button>
+                        <button class="text-base font-medium text-lightPrimary hover:text-lightPrimary 2xl:ml-2">
+                            Watch Video
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </x-section.column>
+
+        <x-section.column  style="flex-basis: inherit;padding: 0.75rem;">
+            <div
+                class="flex w-full flex-col rounded-2xl bg-cover px-[30px] py-[30px] md:px-[64px]"
+                style='background: radial-gradient(#fff7e4, #fce6b2); margin-bottom: 1.5rem'
+            >
+                <div class="w-full">
+                    <h4 class="mb-[14px] max-w-full text-xl font-bold text-black md:text-3xl md:leading-[42px] ">
+                        Discover, collect, and sell extraordinary NFTs
+                    </h4>
+                    <p class="mb-[40px] max-w-full text-base font-medium text-[#696969] ">
+                        Enter in this creative world. Discover now the latest NFTs or start
+                        creating your own!
+                    </p>
+                    <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
+                        <button class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                            Discover now
+                        </button>
+                        <button class="text-base font-medium text-lightPrimary hover:text-lightPrimary 2xl:ml-2">
+                            Watch Video
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex w-full flex-col rounded-2xl bg-cover px-[30px] py-[30px] md:px-[64px]"
+                style='background:radial-gradient(#b6fffc, #eaeaea)'
+            >
+                <div class="w-full">
+                    <h4 class="mb-[14px] max-w-full text-xl font-bold text-black md:text-3xl md:leading-[42px] ">
+                        Discover, collect, and sell extraordinary NFTs
+                    </h4>
+                    <p class="mb-[40px] max-w-full text-base font-medium text-[#696969] ">
+                        Enter in this creative world. Discover now the latest NFTs or start
+                        creating your own!
+                    </p>
+                    <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
+                        <button class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                            Discover now
+                        </button>
+                        <button class="text-base font-medium text-lightPrimary hover:text-lightPrimary 2xl:ml-2">
+                            Watch Video
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </x-section.column>
+
+    </x-section.columns>
+
+{{--Guy ad--}}
+    <div class="mx-auto text-center px-4">
+        <x-heading.h2 class="text-primary-900 p-8">Do more. Automate your workflows</x-heading.h2>
+    </div>
+    <x-section.columns class="mx-auto w-full px-20 p-4 py-4 lg:py-4" id="recommended">
+        <x-section.column  class="w-1/3"  style="flex-basis: inherit;padding: 0.75rem;">
+            <div
+                class="flex w-full flex-col rounded-2xl bg-cover px-[30px] py-[30px] md:px-[64px]"
+                style='background: radial-gradient(#131c21, #000000); height: 100%'
+            >
+                <div class="w-full">
+                    <h4 class="mb-[14px] max-w-full text-xl font-bold text-black md:text-3xl md:leading-[42px] ">
+                        Discover, collect, and sell extraordinary NFTs
+                    </h4>
+                    <p class="mb-[40px] max-w-full text-base font-medium text-[#696969] ">
+                        Enter in this creative world. Discover now the latest NFTs or start
+                        creating your own!
+                    </p>
+                    <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
+                        <button class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                            Discover now
+                        </button>
+                        <button class="text-base font-medium text-lightPrimary hover:text-lightPrimary 2xl:ml-2">
+                            Watch Video
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </x-section.column>
+
+        <x-section.column  class="w-2/3"  style="flex-basis: inherit;padding: 0.75rem;">
+            <img width="100%" src="{{URL::asset('/images/features/businessguy.png')}}" class="rounded-2xl"></img>
+        </x-section.column>
+
+    </x-section.columns>
+
+    <x-section.columns class="max-w-full w-full mt-6  " style="background: aquamarine">
+        <x-section.column class="w-2/3 pt-20 pb-20" style="background-size:cover !important; padding-top: 7rem; padding-bottom: 7rem; background: url({{URL::asset('/images/features/young-woman-working-out-outdoors.png')}})">
             <div x-intersect="$el.classList.add('slide-in-top')">
-                <x-heading.h6 class="text-primary-500">
-                    {{ __('Wurk toolkit') }}
+                <x-heading.h6 class="text-black font-light">
+                    <small class="font-extralight">Jermaine .R</small> <br /> <small>Sales Exec</small>
                 </x-heading.h6>
+            </div>
+
+        </x-section.column>
+
+        <x-section.column class="w-1/3 pt-20 pb-20" style="padding-top: 7rem; padding-bottom: 7rem">
+            <div x-intersect="$el.classList.add('slide-in-top')">
+                <div class="mb-2 md:mb-0">
+                    <a href="/" class="flex items-center">
+                        <img src="{{asset(config('app.logo.dark') )}}" class="h-6 me-3" alt="Logo" />
+                    </a>
+                </div>
                 <x-heading.h2 class="text-primary-900">
-                    {{ __('Complete Kit for Small to Medium Sized Businesses') }}
+                    Why choose <br /> <span class="font-bold">Wurk?</span>
                 </x-heading.h2>
             </div>
 
             <p class="mt-4">
-                {{ __('We belive every business should thrive and eventually mature, and by so doing we support businesses of all sizes, from a 1 band business toForune 500, be rest assured of efficiency on your business needs.') }}
+                {{ __('Because we know that even the best technology is only as good as the people behind it. That’s why we offer expert, 24/7 phone support, plus a lot more.
+') }}
             </p>
+
             <p class="mt-4">
-                {{ __('Use our affordable toolkits to automae your business processes from accounting to brand management to engineered solutions, all at affordable prices.') }}
+                {{ __('Our support is just great !') }}
             </p>
-            <p class="pt-4">
-                {{ __('Powered by:') }}
-            </p>
-            <div class="flex gap-3 pt-1">
-                <a href="https://stripe.com/" target="_blank">
-                    <img src="{{URL::asset('/images/payment-providers/stripe.png')}}" class="h-12 py-2 px-2 border border-primary-50 rounded-lg" />
-                </a>
-                <a href="https://www.paddle.com/" target="_blank">
-                    <img src="{{URL::asset('/images/payment-providers/paddle.png')}}" class="h-12 py-2 px-2 border border-primary-50 rounded-lg" />
-                </a>
+            <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
+                <button class="text-white linear rounded-md bg-black px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                    Get Started
+                </button>
+                <button class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                    Contact Sales
+                </button>
             </div>
         </x-section.column>
 
-        <x-section.column>
-            <img src="{{URL::asset('/images/features/businessguy.png')}}" class="rounded-2xl" dir="right" ></img>
-        </x-section.column>
 
     </x-section.columns>
 
-    <x-section.columns class="max-w-none md:max-w-6xl mt-6" >
-        <x-section.column>
-            <div x-intersect="$el.classList.add('slide-in-top')">
-                <x-heading.h6 class="text-primary-500">
-                    {{ __('Make your move') }}
-                </x-heading.h6>
-                <x-heading.h2 class="text-primary-900">
-                    {{ __('Products, Plans & Pricing.') }}
-                </x-heading.h2>
-            </div>
-
-            <p class="mt-4">
-                {{ __('Create and manage your products, plans, and pricing, set features for each plan, mark a plan as featured, and more.') }}
-            </p>
-
-            <p class="mt-4">
-                {{ __('Rewards your customers with discounts and manage all that from a beautiful admin panel.') }}
-            </p>
-        </x-section.column>
-
-
-    </x-section.columns>
-
-
-    <x-section.columns class="max-w-none md:max-w-6xl mt-6" >
-        <x-section.column>
-            <img src="{{URL::asset('/images/features/plans.png')}}" class="rounded-2xl"/>
-        </x-section.column>
-
-        <x-section.column>
-            <img src="{{URL::asset('/images/features/plans.png')}}" class="rounded-2xl"/>
-        </x-section.column>
-
-
-    </x-section.columns>
 
     {{-- <div class="text-center mt-16 mx-4" id="tech-stack">
         <x-heading.h6 class="text-primary-500">
@@ -316,42 +216,19 @@
     {{--    ////////////--}}
 
 
-    <div class="text-center mt-16" x-intersect="$el.classList.add('slide-in-top')">
-        <x-heading.h6 class="text-primary-500">
-            {{ __('Can\'t get more beautiful and easy to create your website') }}
-        </x-heading.h6>
-        <x-heading.h2 class="text-primary-900">
-            {{ __('Absolutely Fascinating') }}
-        </x-heading.h2>
-    </div>
 
-    <p class="text-center py-4">{{ __('Manage your SaaS application from a beautiful admin panel powered by Filament') }}</p>
 
-    <div class="text-center pt-6 mx-auto max-w-5xl ">
-        <img src="{{URL::asset('/images/features/admin-panel.png')}}" >
-    </div>
+{{--    <div class="pricing">--}}
+{{--        <x-plans.all calculate-saving-rates="true" show-default-product="1"/>--}}
+{{--        <x-products.all/>--}}
+{{--    </div>--}}
 
-    <div class="mx-4 mt=16">
-        <x-heading.h6 class="text-center mt-20 text-primary-500" id="pricing">
-            {{ __('We worked for Months, So You Can Ship in Days') }}
-        </x-heading.h6>
-        <x-heading.h2 class="text-primary-900 text-center">
-            {{ __('Launch your SaaS Today') }}
-        </x-heading.h2>
-    </div>
-
-    <div class="pricing">
-        <x-plans.all calculate-saving-rates="true" show-default-product="1"/>
-        <x-products.all />
-    </div>
+{{--    Accordion FAQ--}}
 
     <div class="text-center mt-24 mx-4" id="faq">
-        <x-heading.h6 class="text-primary-500">
-            {{ __('FAQ') }}
-        </x-heading.h6>
-        <x-heading.h2 class="text-primary-900">
-            {{ __('Got a Question?') }}
-        </x-heading.h2>
+        <x-heading.h3 class="text-primary-900">
+            Serving more thann 300 000 customers, <br />we have compiled the most common asked questions
+        </x-heading.h3>
         <p>{{ __('Here are the most common questions to help you with your decision.') }}</p>
     </div>
 
@@ -387,10 +264,16 @@
                     <li>{{ __('User &amp; Role Management: Create and manage your users and roles, and assign permissions to your users.') }}</li>
                     <li>{{ __('Fully translatable: Translate your application to any language you want.') }}</li>
                     <li>{{ __('Sitemap &amp; SEO: Sitemap and SEO optimization out of the box.') }}</li>
-                    <li>{{ __('Admin Panel: Manage your SaaS application from a beautiful admin panel powered by ') }} <a href="https://filamentphp.com/" target="_blank" rel="noopener noreferrer">Filament</a>.</li>
-                    <li>{{ __('User Dashboard: Your customers can manage their subscriptions, change payment method, upgrade plan, cancel subscription, and more from a beautiful user dashboard powered by') }} <a href="https://filamentphp.com/" target="_blank" rel="noopener noreferrer">Filament</a>.</li>
+                    <li>{{ __('Admin Panel: Manage your SaaS application from a beautiful admin panel powered by ') }}
+                        <a href="https://filamentphp.com/" target="_blank" rel="noopener noreferrer">Filament</a>.
+                    </li>
+                    <li>{{ __('User Dashboard: Your customers can manage their subscriptions, change payment method, upgrade plan, cancel subscription, and more from a beautiful user dashboard powered by') }}
+                        <a href="https://filamentphp.com/" target="_blank" rel="noopener noreferrer">Filament</a>.
+                    </li>
                     <li>{{ __('Automated Tests: Comes with automated tests for critical components of the application.') }}</li>
-                    <li>{{ __('One-line deployment: Provision your server and deploy your application easily with integrated') }} <a href="https://deployer.org/" target="_blank" rel="noopener noreferrer">Deployer</a> {{ __('  support.') }}</li>
+                    <li>{{ __('One-line deployment: Provision your server and deploy your application easily with integrated') }}
+                        <a href="https://deployer.org/" target="_blank"
+                           rel="noopener noreferrer">Deployer</a> {{ __('  support.') }}</li>
                     <li>{{ __('Developer-friendly: Built with developers in mind, uses best coding practices.') }}</li>
                     <li>{{ __('And much more...') }}</li>
                 </ul>
@@ -410,7 +293,10 @@
                 <x-slot name="title">{{ __('Do you offer support?') }}</x-slot>
 
                 <p>
-                    {{ __('Of course! we offer email and discord support to help you with any issues you might face or questions you have. Write us an email at') }} <a href="mailto:{{config('app.support_email')}}" class="text-primary-500 hover:underline">{{config('app.support_email')}}</a> {{ __('or join our') }} <a href="{{config('app.social_links.discord')}}">{{ __('discord server')}}</a> {{ __('to get help.')}}
+                    {{ __('Of course! we offer email and discord support to help you with any issues you might face or questions you have. Write us an email at') }}
+                    <a href="mailto:{{config('app.support_email')}}"
+                       class="text-primary-500 hover:underline">{{config('app.support_email')}}</a> {{ __('or join our') }}
+                    <a href="{{config('app.social_links.discord')}}">{{ __('discord server')}}</a> {{ __('to get help.')}}
                 </p>
 
             </x-accordion.item>
@@ -419,7 +305,10 @@
                 <x-slot name="title">{{'What Tech stack is used?'}}</x-slot>
 
                 <p>
-                    {{ __('SaaSykit is built on top of') }} <a href="https://laravel.com" target="_blank">Laravel</a> {{ __('Laravel, the most popular PHP framework, and') }} <a target="_blank" href="https://filamentphp.com/">Filament</a> {{ __(', a beautiful and powerful admin panel for Laravel. It also uses TailwindCSS, AlpineJS, and Livewire.')}}
+                    {{ __('SaaSykit is built on top of') }} <a href="https://laravel.com"
+                                                               target="_blank">Laravel</a> {{ __('Laravel, the most popular PHP framework, and') }}
+                    <a target="_blank"
+                       href="https://filamentphp.com/">Filament</a> {{ __(', a beautiful and powerful admin panel for Laravel. It also uses TailwindCSS, AlpineJS, and Livewire.')}}
                 </p>
                 <p class="mt-4">
                     {{ __('You can use your favourite database (MySQL, PostgreSQL, SQLite) and your favourite queue driver (Redis, Amazon SQS, etc).')}}
@@ -440,7 +329,9 @@
                 <x-slot name="title">{{'Do you offer refunds?'}}</x-slot>
 
                 <p>
-                    {{ __('Yes, we offer a 14-day money-back guarantee. If you are not satisfied with SaaSykit, you can request a refund within 14 days of your purchase. Please write us an email at') }} <a href="mailto:{{config('app.support_email')}}" class="text-primary-500 hover:underline">{{config('app.support_email')}}</a> {{ __('to request a refund.')}}
+                    {{ __('Yes, we offer a 14-day money-back guarantee. If you are not satisfied with SaaSykit, you can request a refund within 14 days of your purchase. Please write us an email at') }}
+                    <a href="mailto:{{config('app.support_email')}}"
+                       class="text-primary-500 hover:underline">{{config('app.support_email')}}</a> {{ __('to request a refund.')}}
                 </p>
 
             </x-accordion.item>
@@ -458,7 +349,8 @@
                 <x-slot name="title">{{'Is there a demo available?'}}</x-slot>
 
                 <p>
-                    {{ __('Yes, a demo is available to help you get a feel of SaaSykit. You can find the demo') }} <a href="https://saasykit.com/demo" target="_blank" rel=”nofollow” >here</a>.
+                    {{ __('Yes, a demo is available to help you get a feel of SaaSykit. You can find the demo') }} <a
+                        href="https://saasykit.com/demo" target="_blank" rel=”nofollow”>here</a>.
                 </p>
 
             </x-accordion.item>
@@ -467,7 +359,8 @@
                 <x-slot name="title">{{'Is there documentation available?'}}</x-slot>
 
                 <p>
-                    {{ __('Yes, an extensive documentation is available to help you get started with SaaSykit. You can find the documentation ')}} <a href="https://saasykit.com/docs" target="_blank">here</a>.
+                    {{ __('Yes, an extensive documentation is available to help you get started with SaaSykit. You can find the documentation ')}}
+                    <a href="https://saasykit.com/docs" target="_blank">here</a>.
                 </p>
 
             </x-accordion.item>
