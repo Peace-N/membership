@@ -1,6 +1,6 @@
 <div {{$attributes->merge(['class' => 'tab-slider mx-auto px-8 sm:px-0'])}} >
-    <div class="mx-auto">
-        <div class="overflow-x-auto overscroll-contain scrollbar-hide">
+    <div class="mx-auto max-w-full">
+        <div class="overflow-x-auto overscroll-contain scrollbar-show">
             <div
                 role="tablist"
                 aria-label="tabs"
