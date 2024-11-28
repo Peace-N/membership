@@ -74,6 +74,10 @@ class AdminPanelProvider extends PanelProvider
                     ->icon('heroicon-c-qr-code')
                     ->collapsed(),
                 NavigationGroup::make()
+                    ->label('Cms')
+                    ->icon('heroicon-s-newspaper')
+                    ->collapsed(),
+                NavigationGroup::make()
                     ->label('Product Management')
                     ->icon('heroicon-s-shopping-cart')
                     ->collapsed(),

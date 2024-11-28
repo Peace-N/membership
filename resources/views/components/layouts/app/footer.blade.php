@@ -15,11 +15,11 @@
             <div class="mb-6 md:mb-0">
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">About Wurk</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('About us') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Careers') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Contact us') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Wurk Blog') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Legal') }}</a></li>
+                    @foreach($aboutFooter->pages as $pages)
+                        <li class="text-xs mt-2"><a target="_blank" href="{{route('page.view', $pages->slug)}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
+                    @endforeach
+                    <li class="text-xs mt-2"><a target="_blank" href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Blog') }}</a></li>
+                    <li class="text-xs mt-2"><a target="_blank" href="{{route('page.category', 'legal')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Legal') }}</a></li>
 
                 </ul>
             </div>
@@ -27,9 +27,9 @@
             <div class="mb-6 md:mb-0">
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">Support@Wurk</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Product Support') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Abuse') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Reources') }}</a></li>
+                    @foreach($supportFooter->pages as $pages)
+                        <li class="text-xs mt-2"><a target="_blank" href="{{route('page.view', $pages->slug)}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
+                    @endforeach
 
                 </ul>
             </div>
@@ -37,26 +37,25 @@
             <div class="mb-6 md:mb-0">
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">Resources</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Documentations') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('API') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Developers') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('WHOIS') }}</a></li>
+                    @foreach($resourcesFooter->pages as $pages)
+                        <li class="text-xs mt-2"><a target="_blank" href="{{route('page.view', $pages->slug)}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
+                    @endforeach
                 </ul>
             </div>
 
             <div class="mb-6 md:mb-0">
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">Partner Programmes</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Affiliates') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Resellers') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Member Benefits') }}</a></li>
+                    @foreach($affiliatesFooter->pages as $pages)
+                        <li class="text-xs mt-2"><a target="_blank" href="{{route('page.view', $pages->slug)}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
+                    @endforeach
                 </ul>
             </div>
 
             <div class="mb-6 md:mb-0">
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">Account</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('My Products') }}</a></li>
+                    <li class="text-xs mt-2"><a target="_blank" href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('My Products') }}</a></li>
                     <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Billing & Subscriptions') }}</a></li>
                     <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Become a Member') }}</a></li>
                 </ul>
@@ -65,8 +64,8 @@
             <div class="mb-6 md:mb-0">
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">Shopping</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Buy a Domain') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Crete a Website') }}</a></li>
+                    <li class="text-xs mt-2"><a target="_blank" href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Buy a Domain') }}</a></li>
+                    <li class="text-xs mt-2"><a target="_blank" href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Crete a Website') }}</a></li>
                     <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Logo Generator') }}</a></li>
                     <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Business Cards Maker') }}</a></li>
                     <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Create Business Profile') }}</a></li>

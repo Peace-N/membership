@@ -23,6 +23,10 @@ Route::get('/', function () {
     return view('home');
 })->name('home')->middleware('sitemapped');
 
+Route::get('/footer-widget', function () {
+    return view('footer-widget');
+})->name('footer')->middleware('sitemapped');
+
 Auth::routes();
 
 Route::get('/email/verify', function () {
@@ -107,6 +111,22 @@ Route::get('/blog/category/{slug}', [
     App\Http\Controllers\BlogController::class,
     'category',
 ])->name('blog.category');
+
+// pages
+Route::get('/page/{slug}', [
+    App\Http\Controllers\PageController::class,
+    'view',
+])->name('page.view');
+
+Route::get('/page', [
+    App\Http\Controllers\PageController::class,
+    'all',
+])->name('page')->middleware('sitemapped');
+
+Route::get('/page/category/{slug}', [
+    App\Http\Controllers\PageController::class,
+    'category',
+])->name('page.category');
 
 Route::get('/terms-of-service', function () {
     return view('pages.terms-of-service');
