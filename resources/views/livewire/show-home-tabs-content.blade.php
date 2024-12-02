@@ -5,7 +5,7 @@
                 <x-section.columns style="flex-wrap: wrap !important;" class="px-0 p-0 py-0 sm:px-0 md:px-0 lg:px-20 flex-wrap md:flex-wrap mx-auto w-full lg:py-4" id="{{$category->name}}">
                     <x-section.column class="w-full sm:w-full md:w-full lg:w-8/12 xl:w-8/12"  style="flex-basis: inherit;padding: 0.75rem;">
                         <div class=mx-auto">
-                            <img src="{{URL::asset($category->image)}}" class="drop-shadow-xl rounded-2xl"/>
+                            <img src="{{\Illuminate\Support\Facades\Storage::url($category->image)}}" class="drop-shadow-xl rounded-2xl"/>
                         </div>
                     </x-section.column>
 
