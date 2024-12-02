@@ -64,16 +64,9 @@
             <div class="mb-6 md:mb-0">
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">Shopping</a></li>
-                    <li class="text-xs mt-2"><a target="_blank" href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Buy a Domain') }}</a></li>
-                    <li class="text-xs mt-2"><a target="_blank" href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Crete a Website') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Logo Generator') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Business Cards Maker') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Create Business Profile') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Create Business Plan') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Create Business Proposal') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('CRM') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Accounting & Invoicing') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Project Management') }}</a></li>
+                    @foreach($portals as $portal)
+                    <li class="text-xs mt-2"><a target="_blank" href="https://{{$portal->portal}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $portal->name }}</a></li>
+                    @endforeach
                 </ul>
             </div>
 

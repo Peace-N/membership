@@ -168,9 +168,9 @@
 <!-- This is an example component -->
 
     <nav class="border-gray-200">
-        <div class="navbar max-w-full mx-auto px-20	bg-base-100 text-primary-50">
+        <div class="navbar max-w-full mx-auto w-full px-0  lg:px-20 	bg-base-100 text-primary-50 justify-between">
             <div class="navbar-start">
-            <a href="#" class="flex">
+            <a href="/" class="flex">
                 <img src="{{asset(config('app.logo.dark') )}}" class="h-6" alt="Logo" />
             </a>
             <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">

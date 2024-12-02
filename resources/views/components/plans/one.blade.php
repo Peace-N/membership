@@ -72,7 +72,12 @@
                     <x-features.li-item>{{$feature['feature']}}</x-features.li-item>
                 @endforeach
             @endif
+                <p class="font-normal text-xs">
+                    <a href="https://{{$plan->product->category->portal}}">Learn more about {{$plan->product->name}}</a>
+                </p>
+                <hr />
         </ul>
+
     </div>
 
 

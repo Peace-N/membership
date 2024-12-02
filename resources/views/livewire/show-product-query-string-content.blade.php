@@ -9,18 +9,15 @@
                     {{$product->name}}
                 </h5>
                 @if($product->is_managed)
-                    <span class="badge badge-accent">FULLY MANAGED PRODUCT</span>
+                    <span class="badge badge-accent" style="border-radius: 0 !important;">FULLY MANAGED PRODUCT</span>
                 @else
-                    <span class="badge badge-ghost">SELF SERVICE PRODUCT</span>
+                    <span class="badge badge-ghost" style="border-radius: 0 !important;">SELF SERVICE PRODUCT</span>
                 @endif
                 <p class="mb-[14px] max-w-full text-base font-normal text-[#696969] ">
                     {{$product->description}}
                 </p>
-                <p class="font-normal text-xs">
-                    <a href="#">Learn more about {{$product->name}}</a>
-                </p>
 
-                <span class="badge badge-accent badge-outline">STARTING FROM:</span>
+                <span class="badge badge-accent badge-outline" style="border-radius: 0 !important;">STARTING FROM:</span>
 
 
                 <div class=" flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
@@ -38,6 +35,10 @@
                         @endforeach
                     </button>
                 </div>
+                <p class="font-normal text-xs">
+                    <a href="https://{{$category->portal}}">Learn more about {{$product->name}}</a>
+                </p>
+                <hr />
                 <div class="mt-[14px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
                     <a href="{{route('pricing.item', $product)}}" class="text-white linear rounded-md bg-black px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-gray-500 active:!bg-gray/70">
                         See All Plans

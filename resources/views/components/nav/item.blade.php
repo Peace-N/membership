@@ -4,7 +4,7 @@
 @php($selectedClass = $selected ? 'text-primary-500' : 'text-black')
 
 <li {{ $attributes }}>
-    <a href="{{ str_starts_with($route, '#') ? (route('home') . $route) : route($route) }}" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 {{ $selectedClass }}">
+    <a href="{{ str_starts_with($route, '#') ? (route('home') . $route) : $route }}" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 {{ $selectedClass }}">
         {{ $slot }}
     </a>
 </li>

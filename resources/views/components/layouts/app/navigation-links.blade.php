@@ -1,30 +1,35 @@
 
 <li>
-    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Wurk Products <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="text-md text-black font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 flex items-center justify-between w-full md:w-auto">Wurk Products <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
     <!-- Dropdown menu -->
     <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
         <ul class="py-1" aria-labelledby="dropdownLargeButton">
+            @foreach($portals as $portal)
             <li>
-                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Dashboard</a>
+                <a href="https://{{$portal->portal}}" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">{{$portal->name}}</a>
             </li>
-            <li>
-                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Settings</a>
-            </li>
-            <li>
-                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Earnings</a>
-            </li>
+            @endforeach
         </ul>
         <div class="py-1">
-            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
+            @if(auth()->user())
+            <a href="/login" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign in</a>
+            @else
+            <a href="/logout" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
+            @endif
         </div>
     </div>
 </li>
-<x-nav.item route="#features">{{ __('Websites and Hosting') }}</x-nav.item>
-<x-nav.item route="#features">{{ __('CRM') }}</x-nav.item>
-<x-nav.item route="pricing">{{ __('Pricing') }}</x-nav.item>
-<x-nav.item route="pricing">{{ __('Categories') }}</x-nav.item>
-<x-nav.item route="blog">{{ __('Account Center') }}</x-nav.item>
-<x-nav.item route="#faq">{{ __('Help & Support') }}</x-nav.item>
+{{--<x-nav.item href="https://webstore.design">{{ __('Websites and Hosting') }}</x-nav.item>--}}
+{{--<x-nav.item href="https://crm.wurk.africa">{{ __('CRM') }}</x-nav.item>--}}
+{{--<x-nav.item route="pricing">{{ __('Pricing') }}</x-nav.item>--}}
+{{--<x-nav.item href="/login">{{ __('Account Center') }}</x-nav.item>--}}
+{{--<a href="{{ str_starts_with($route, '#') ? (route('home') . $route) : $route }}" --}}
+
+<a href="https://webstore.design" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">{{ __('Websites and Hosting') }}</a>
+<a href="https://crm.wurk.africa" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">{{ __('CRM') }}</a>
+<a href="{{'/pricing?source=home&product_touch=Websites'}}" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">{{ __('Pricing') }}</a>
+<a href="/login" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">{{ __('Account Center') }}</a>
+<a href="/page/product-support" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">{{ __('Help & Support') }}</a>
 
 @guest
     <x-nav.item route="login" class="md:hidden">{{ __('Login') }}</x-nav.item>

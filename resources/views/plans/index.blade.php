@@ -32,26 +32,6 @@
 
             <div class="w-auto"> Wurk Self & Managed Services</div>
 
-{{--            <div class="w-1/6 rounded-1xl" style="    border-radius: 4px;width: 2%; background: aquamarine;padding: 2px;margin-right: 7px;">--}}
-{{--                @svg('heroicon-o-check-circle', 'stroke-black')--}}
-
-{{--            </div>--}}
-
-{{--            <div class="w-2/6"> Wurk CRM</div>--}}
-
-{{--            <div class="w-1/6 rounded-1xl" style="    border-radius: 4px;width: 2%; background: aquamarine;padding: 2px;margin-right: 7px;">--}}
-{{--                @svg('heroicon-o-check-circle', 'stroke-black')--}}
-
-{{--            </div>--}}
-
-{{--            <div class="w-2/6"> Wurk Plans</div>--}}
-
-{{--            <div class="w-1/6 rounded-1xl" style="    border-radius: 4px;width: 2%; background: aquamarine;padding: 2px;margin-right: 7px;">--}}
-{{--                @svg('heroicon-o-check-circle', 'stroke-black')--}}
-
-{{--            </div>--}}
-
-{{--            <div class="w-2/6"> Wurk Proposals</div>--}}
 
 
 

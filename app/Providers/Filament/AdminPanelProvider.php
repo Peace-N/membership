@@ -90,6 +90,10 @@ class AdminPanelProvider extends PanelProvider
                     ->icon('heroicon-s-cog')
                     ->collapsed(),
                 NavigationGroup::make()
+                    ->label('3rd Party Apps')
+                    ->icon('heroicon-c-command-line')
+                    ->collapsed(),
+                NavigationGroup::make()
                     ->label('Blog')
                     ->icon('heroicon-s-newspaper')
                     ->collapsed(),

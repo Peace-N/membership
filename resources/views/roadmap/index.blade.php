@@ -76,6 +76,18 @@
                     tab.classList.remove('text-gray-800');
                 });
             });
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const myParam = urlParams.get('product_touch');
+
+            const event = new MouseEvent("click", {
+                view: window,
+                bubbles: true,
+                cancelable: true,
+            });
+            const cb = document.getElementById(myParam + 'Tab');
+            cb.dispatchEvent(event);
+
         });
     </script>
 
