@@ -127,8 +127,8 @@
     margin-top: -18px;
   }
 
-  .navbar-start {width: 25% !important}
-  .navbar-end {width: 25% !important}
+  /*.navbar-start {width: 25% !important}*/
+  /*.navbar-end {width: 25% !important}*/
 
   </style>
 
@@ -169,33 +169,38 @@
 
     <nav class="border-gray-200">
         <div class="navbar max-w-full mx-auto w-full px-0  lg:px-20 	bg-base-100 text-primary-50 justify-between">
-            <div class="navbar-start">
-            <a href="/" class="flex">
-                <img src="{{asset(config('app.logo.dark') )}}" class="h-6" alt="Logo" />
-            </a>
-            <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
+            <div class="navbar-start w-6/12 ml-1">
+                            <div class="dropdown">
+                                <div tabindex="0" role="button" class="btn btn-ghost text-black lg:hidden">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                                </div>
+                                <ul class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                    <x-layouts.app.navigation-links></x-layouts.app.navigation-links>
+                                </ul>
+                            </div>
+                <a href="/" class="flex">
+                    <img src="{{asset(config('app.logo.dark') )}}" class="h-6" alt="Logo"/>
+                </a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
 
-                                <x-nav>
-                                    <x-layouts.app.navigation-links></x-layouts.app.navigation-links>
-                                </x-nav>
+                    <x-nav>
+                        <x-layouts.app.navigation-links></x-layouts.app.navigation-links>
+                    </x-nav>
 
                 </ul>
             </div>
-                    <div class="navbar-end">
-                        @auth
-                            <x-layouts.app.user-menu></x-layouts.app.user-menu>
-                        @else
-                            <x-link class="hidden md:block text-block text-bold" href="{{route('login')}}">{{ __('Sign in') }}</x-link>
-                            <x-button-link.secondary elementType="a" href="#pricing">{{ __('Get started') }}</x-button-link.secondary>
-                        @endauth
-                    </div>
+            <div class="navbar-end w-6/12 mr-1">
+                @auth
+                    <x-layouts.app.user-menu></x-layouts.app.user-menu>
+                @else
+                    <x-link class="hidden md:block text-block text-bold"
+                            href="{{route('login')}}">{{ __('Sign in') }}</x-link>
+                    <x-button-link.secondary elementType="a"
+                                             href="#pricing">{{ __('Get started') }}</x-button-link.secondary>
+                @endauth
+            </div>
         </div>
     </nav>
 

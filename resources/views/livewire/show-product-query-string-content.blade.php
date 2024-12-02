@@ -2,7 +2,7 @@
     @foreach($categories as $category)
     <div id="{{$category->name}}Content" class="tab-content w-full flex flex-wrap mt-8">
         @foreach($category->products as $product)
-        <div class=" w-4/12  rounded-2xl bg-cover px-[10px] py-[10px]">
+        <div class="w-full lg:w-4/12  rounded-2xl bg-cover px-[10px] py-[10px]">
             <div class="w-full px-[40px] py-[40px] rounded-2xl"  style='border: 1px solid #dcdcdc;'>
                 <div class="w-1/6 rounded-1xl" style="border-radius: 12px; width: 11.666667%; background: aquamarine; padding:8px">{{ svg($category->icon) }}</div>
                 <h5 class="mb-[14px] max-w-full text-xl font-bold text-black  md:leading-[42px] ">
