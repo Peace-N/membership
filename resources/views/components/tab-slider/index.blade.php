@@ -1,4 +1,4 @@
-<div {{$attributes->merge(['class' => 'tab-slider mx-auto px-8 sm:px-0'])}} >
+<div {{$attributes->merge(['class' => 'tab-slider mx-auto px-0 lg:px-8 sm:px-0'])}} >
     <div class="mx-auto max-w-full">
         <div class="overflow-x-auto overscroll-contain scrollbar-show">
             <div

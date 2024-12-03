@@ -1,9 +1,9 @@
 <x-layouts.app>
-    <div class="px-20 p-4 py-4 ">
+    <div class="px-1 lg:px-20 lg:p-4 lg:py-4 ">
         <x-heading.h2  class="text-primary-900 p-8">Browse Plans for {{$desc->name}}</x-heading.h2>
 
 
-        <div class="flex gap-3 flex-inline  items-center" style="border-bottom: 1px solid #cdcdcd">
+        <div class="flex gap-3 flex-inline hidden lg:flex  items-center" style="border-bottom: 1px solid #cdcdcd">
 
             <div class="w-1/6 rounded-1xl" style="border-radius: 12px; width: 2%;  padding:8px">
                 @svg('heroicon-o-arrow-long-left', 'stroke-black')
@@ -39,7 +39,7 @@
 
     </div>
 
-    <x-section.columns class="mx-auto w-full px-20 p-4 py-4 lg:py-4" id="recommended">
+    <x-section.columns class="mx-auto w-full px-1 lg:px-20 lg:p-4 lg:py-4 lg:py-4" id="recommended">
 
         <x-section.column  class="w-full mx-auto"  style="flex-basis: inherit;padding: 0.75rem;">
 {{--            <livewire:show-product-single :product="$product" />--}}
