@@ -4,7 +4,7 @@
             <div
                 role="tablist"
                 aria-label="tabs"
-                class="w-max mx-auto h-12 flex flex-nowrap items-center px-1 rounded-full bg-neutral-200  transition overflow-hidden"
+                class="w-max mx-auto h-12 flex flex-nowrap items-center px-1 rounded-full bg-[rgb(47 164 159)]  transition overflow-hidden"
             >
                 {{ $tabNames }}
             </div>

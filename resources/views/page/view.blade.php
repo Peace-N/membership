@@ -8,22 +8,6 @@
             {{ $post->description }}
         </p>
 
-        <div class="flex gap-3 justify-center pt-6">
-            <x-link.social-icon name="x" title="{{ __('Twitter page') }}" link="https://x.com/intent/post?text={{ urlencode(__('Check out the latest news and updates :app blog!', ['app' => config('app.name')])) }}&url={{ urlencode(url()->current()) }}" class="hover:text-primary-500"/>
-            <x-link.social-icon name="linkedin" title="{{ __('LinkedIn community') }}" link="https://www.linkedin.com/shareArticle?url={{ urlencode(url()->current()) }}&title={{ urlencode(__('Check out the latest news and updates :app blog!', ['app' => config('app.name')])) }}" class="hover:text-primary-500"/>
-        </div>
-    </div>
-
-    <div class="text-primary-500 text-sm text-center mx-auto mt-8">
-        {{ __('Share this post.') }}
-    </div>
-    <div class="flex gap-3 justify-center pt-3">
-        <x-link.social-icon name="x" title="{{ __('Twitter page') }}"
-                            link="https://x.com/intent/post?text={{ urlencode($post->title) }}&url={{ urlencode(url()->current()) }}"
-                            class="hover:text-primary-500"/>
-        <x-link.social-icon name="linkedin" title="{{ __('LinkedIn community') }}"
-                            link="https://www.linkedin.com/shareArticle?url={{ urlencode(url()->current()) }}&title={{ urlencode($post->title) }}"
-                            class="hover:text-primary-500"/>
     </div>
 
         <div class="mx-auto w-10/12 mx-auto px-20 p-4 py-8 lg:py-8">

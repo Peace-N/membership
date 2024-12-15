@@ -1,13 +1,21 @@
 <x-layouts.app>
     <x-slot name="title">
-        {{ __('SaaSykit - Laravel SaaS Starter Kit') }}
+        {{ __('Wurk - A fullkit of wurk services') }}
     </x-slot>
 
     <x-section.hero class="w-full mb-8 md:mb-72">
 
         <div class="mx-auto text-center h-160 md:h-180 px-4">
             <x-pill class="text-primary-500 bg-primary-50">{{ __('Automate Your Business with Wurk') }}</x-pill>
-            <x-heading.h1 class="mt-4 text-primary-50 font-bold">
+
+            <x-heading.h1 class="text-5xl hidden lg:block mb-4 mt-4 text-primary-50 font-bold">
+                {{ __('Popular Services picked for you') }}
+                <br class="hidden sm:block">
+                {{ __('let\'s Wurk') }}
+
+            </x-heading.h1>
+
+            <x-heading.h1 class="!text-2xl lg:hidden mb-4 mt-4 text-primary-50 font-bold">
                 {{ __('Popular Services picked for you') }}
                 <br class="hidden sm:block">
                 {{ __('let\'s Wurk') }}
@@ -164,7 +172,7 @@
 
     </x-section.columns>
 
-    <x-section.columns class="max-w-full w-full mt-6  " style="background: aquamarine">
+    <x-section.columns class="max-w-full w-full mt-6  " style="background: #e9e9e9">
         <x-section.column class="w-2/3 pt-20 pb-20" style="background-size:cover !important; padding-top: 7rem; padding-bottom: 7rem; background: url({{URL::asset('/images/features/young-woman-working-out-outdoors.png')}})">
             <div x-intersect="$el.classList.add('slide-in-top')">
                 <x-heading.h6 class="text-black font-light">

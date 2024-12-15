@@ -35,7 +35,15 @@ class PageController extends Controller
 
     public function category(string $slug)
     {
+
         $category = PageCategory::where('slug', $slug)->firstOrFail();
+
+        if($slug === 'support' || $slug === 'resources') {
+            return view('page.help', [
+                'category' => $category,
+                'posts' => $this->pageManager->getAllPagesForCategory($category),
+            ]);
+        }
         return view('page.category', [
             'category' => $category,
             'posts' => $this->pageManager->getAllPagesForCategory($category),

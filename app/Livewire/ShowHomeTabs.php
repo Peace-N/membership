@@ -10,7 +10,7 @@ class ShowHomeTabs extends Component
     public $categories;
     public function render()
     {
-        $this->categories = Category::all()->random(7);
+        $this->categories = Category::all();
         return view('livewire.show-home-tabs');
     }
 }

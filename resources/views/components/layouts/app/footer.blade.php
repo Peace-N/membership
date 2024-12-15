@@ -28,7 +28,7 @@
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">Support@Wurk</a></li>
                     @foreach($supportFooter->pages as $pages)
-                        <li class="text-xs mt-2"><a target="_blank" href="{{route('page.view', $pages->slug)}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
+                        <li class="text-xs mt-2"><a target="_blank" href="{{$pages->slug === 'product-support' ? '/page/category/support' : route('page.view', $pages->slug)}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
                     @endforeach
 
                 </ul>
@@ -47,7 +47,7 @@
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">Partner Programmes</a></li>
                     @foreach($affiliatesFooter->pages as $pages)
-                        <li class="text-xs mt-2"><a target="_blank" href="{{route('page.view', $pages->slug)}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
+                        <li class="text-xs mt-2"><a target="_blank" href="https://affiliates.wurk.africa" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
                     @endforeach
                 </ul>
             </div>
