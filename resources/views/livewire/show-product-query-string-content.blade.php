@@ -1,23 +1,23 @@
 <div>
     @foreach($categories as $category)
-    <div id="{{$category->name}}Content" class="tab-content w-full flex flex-wrap mt-8">
+    <div id="{{$category->name}}Content" class="tab-content gap-3 w-full flex flex-wrap mt-8">
         @foreach($category->products as $product)
-        <div class="w-full lg:w-4/12  rounded-2xl bg-cover px-[10px] py-[10px]">
+        <div class="w-full xl:w-5/12  rounded-2xl bg-cover px-[10px] py-[10px]">
             <div class="w-full px-[40px] py-[40px] rounded-2xl"  style='border: 1px solid #dcdcdc;'>
                 <div class="w-1/6 rounded-1xl" style="border-radius: 12px; width: 11.666667%; background: aquamarine; padding:8px">{{ svg($category->icon) }}</div>
-                <h5 class="mb-[14px] max-w-full text-xl font-bold text-black  md:leading-[42px] ">
+                <h5 class="mb-[14px] max-w-full xl:text-sm font-bold text-black  ">
                     {{$product->name}}
                 </h5>
-                @if($product->is_managed)
-                    <span class="badge badge-accent" style="border-radius: 0 !important;">FULLY MANAGED PRODUCT</span>
-                @else
-                    <span class="badge badge-ghost" style="border-radius: 0 !important;">SELF SERVICE PRODUCT</span>
-                @endif
+{{--                @if($product->is_managed)--}}
+{{--                    <span class="badge badge-accent" style="border-radius: 0 !important;">FULLY MANAGED PRODUCT</span>--}}
+{{--                @else--}}
+{{--                    <span class="badge badge-ghost" style="border-radius: 0 !important;">SELF SERVICE PRODUCT</span>--}}
+{{--                @endif--}}
                 <p class="mb-[14px] max-w-full text-base font-normal text-[#696969] ">
                     {{$product->description}}
                 </p>
 
-                <span class="badge badge-accent badge-outline" style="border-radius: 0 !important;">STARTING FROM:</span>
+                <span class="badge badge-accent badge-outline" style="border-radius: 0 !important;">From &raquo;</span>
 
 
                 <div class=" flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">

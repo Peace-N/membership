@@ -33,13 +33,13 @@
 
     </div>
 
-    <x-section.columns class="mx-auto w-full px-1 lg:px-20 lg:p-4 lg:py-4 lg:py-4" id="recommended">
+    <x-section.columns class="mx-auto w-full px-1 lg:px-3 lg:p-4 lg:py-4 lg:py-4" id="recommended">
 
-        <x-section.column  class="w-full lg:w-2/12"  style="flex-basis: inherit;padding: 0.75rem;">
+        <x-section.column  class="w-full lg:w-4/12"  style="flex-basis: inherit;padding: 0.75rem;">
             <livewire:show-product-query-string />
         </x-section.column>
 
-        <x-section.column  class="w-full lg:w-10/12"  style="flex-basis: inherit;padding: 0.75rem;">
+        <x-section.column  class="w-full lg:w-9/12"  style="flex-basis: inherit;padding: 0.75rem;">
             <div>
                 <livewire:show-product-query-string-content />
             </div>

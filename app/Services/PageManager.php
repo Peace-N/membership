@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Category;
 use App\Models\Page;
 use App\Models\PageCategory;
 
@@ -36,6 +37,14 @@ class PageManager
     public function getAllPagesForCategory(PageCategory $category, int $limit = 31)
     {
         return $this->getAllPagesQuery()
+            ->where('page_category_id', $category->id)
+            ->paginate($limit);
+    }
+
+    public function getAllPagesForProductCategory(PageCategory $category, Category $productCategory, int $limit = 31)
+    {
+        return $this->getAllPagesQuery()
+            ->where('category_id', $productCategory->id)
             ->where('page_category_id', $category->id)
             ->paginate($limit);
     }

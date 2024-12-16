@@ -3,9 +3,9 @@
         {{ __('Wurk - A fullkit of wurk services') }}
     </x-slot>
 
-    <x-section.hero class="w-full mb-8 md:mb-72">
+    <x-section.hero class="w-full mb-8 md:mb-8">
 
-        <div class="mx-auto text-center h-160 md:h-180 px-4">
+        <div class="mx-auto text-center px-4">
             <x-pill class="text-primary-500 bg-primary-50">{{ __('Automate Your Business with Wurk') }}</x-pill>
 
             <x-heading.h1 class="text-5xl hidden lg:block mb-4 mt-4 text-primary-50 font-bold">
@@ -40,10 +40,10 @@
     <div class="mx-auto text-center px-4">
         <x-heading.h2 class="text-primary-900">Grow you brand with Wurk. Pick a service</x-heading.h2>
     </div>
-    <x-section.columns class="max-w-none md:max-w-6xl pt-16" id="features">
+    <x-section.columns class="max-w-none md:max-w-6xl pt-8" id="features">
         <x-section.column  class="w-full m:w-full md:w-full lg:w-6/12"  style="flex-basis: inherit;padding: 0.75rem;">
             <div
-                class="flex w-full flex-col rounded-2xl bg-cover px-[30px] py-[30px] md:px-[64px]"
+                class="flex w-full flex-col rounded-2xl bg-cover px-[30px] py-[30px] md:px-[14px]"
                 style='background: radial-gradient(#e0f3fd, #d4e9f7); height: 100%'
             >
                 <div class="w-full">
@@ -67,7 +67,7 @@
 
         <x-section.column class="w-full m:w-full md:w-full lg:w-6/12"  style="flex-basis: inherit;padding: 0.75rem;">
             <div
-                class="flex w-full flex-col rounded-2xl bg-cover px-[30px] py-[30px] md:px-[64px]"
+                class="flex w-full flex-col rounded-2xl bg-cover px-[30px] py-[30px] md:px-[14px]"
                 style='background: radial-gradient(#fff7e4, #fce6b2); margin-bottom: 1.5rem'
             >
                 <div class="w-full">
@@ -118,7 +118,7 @@
     <div class="mx-auto text-center px-4">
         <x-heading.h2 class="text-primary-900 p-8">Do more. Automate your workflows. Try Wurk CRM</x-heading.h2>
     </div>
-    <x-section.columns class="mx-auto w-full px-0 lg:px-20 p-4 py-4 lg:py-4" id="recommended">
+    <x-section.columns class="mx-auto w-full px-0 lg:px-0 p-4 py-4 lg:py-4" id="recommended">
         <x-section.column  class="w-full m:w-full md:w-full lg:w-6/12"  style="flex-basis: inherit;padding: 0.75rem;">
             <div
                 class="flex w-full flex-col rounded-2xl bg-cover px-[30px] py-[30px] md:px-[64px]"

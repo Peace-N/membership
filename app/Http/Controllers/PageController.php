@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\PageCategory;
 use App\Services\PageManager;
 
@@ -39,10 +40,21 @@ class PageController extends Controller
         $category = PageCategory::where('slug', $slug)->firstOrFail();
 
         if($slug === 'support' || $slug === 'resources') {
+
+            if(request()->has('product_category')) {
+                $productSlug = request()->input('product_category');
+                $productCategory = Category::where('portal', $productSlug)->firstOrFail();
+                return view('page.category-help', [
+                    'category' => $category,
+                    'product' => $productCategory,
+                    'posts' => $this->pageManager->getAllPagesForProductCategory($category, $productCategory),
+                ]);
+            }
             return view('page.help', [
                 'category' => $category,
                 'posts' => $this->pageManager->getAllPagesForCategory($category),
             ]);
+
         }
         return view('page.category', [
             'category' => $category,

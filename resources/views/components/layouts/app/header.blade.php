@@ -197,7 +197,7 @@
                 @else
                     <x-link class="hidden md:block text-block text-bold"
                             href="{{route('login')}}">{{ __('Sign in') }}</x-link>
-                    <x-button-link.secondary elementType="a"
+                    <x-button-link.secondary class="hidden xl:block" elementType="a"
                                              href="#pricing">{{ __('Get started') }}</x-button-link.secondary>
                 @endauth
             </div>
