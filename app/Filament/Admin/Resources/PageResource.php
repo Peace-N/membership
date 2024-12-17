@@ -56,6 +56,8 @@ class PageResource extends Resource
                         ->maxLength(255),
                     Forms\Components\Select::make('category_id')
                         ->relationship('category', 'name')->label('Product Category'),
+                    Forms\Components\Select::make('group_page_category_id')
+                        ->relationship('groupPageCategory', 'name')->label('Sub Grouping Category'),
                     Forms\Components\Select::make('page_category_id')
                         ->relationship('pageCategory', 'name'),
                     Forms\Components\SpatieMediaLibraryFileUpload::make('image')
@@ -77,6 +79,8 @@ class PageResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('category.name')
                     ->label(__('Product Category')),
+                Tables\Columns\TextColumn::make('groupPageCategory.name')
+                    ->label(__('Grouping Sub Category')),
                 Tables\Columns\TextColumn::make('pageCategory.name')
                     ->label(__('Page Category')),
                 Tables\Columns\TextColumn::make('title')

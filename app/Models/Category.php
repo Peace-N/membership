@@ -26,4 +26,9 @@ class Category extends Model
     {
         return $this->hasMany(Page::class);
     }
+
+    public function grouPageCategories(): HasMany
+    {
+        return $this->hasMany(GroupPageCategory::class);
+    }
 }

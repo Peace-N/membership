@@ -36,7 +36,6 @@ class PageController extends Controller
 
     public function category(string $slug)
     {
-
         $category = PageCategory::where('slug', $slug)->firstOrFail();
 
         if($slug === 'support' || $slug === 'resources') {

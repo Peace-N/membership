@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Category;
+use App\Models\GroupPageCategory;
 use App\Models\Page;
 use App\Models\PageCategory;
 
@@ -43,9 +44,8 @@ class PageManager
 
     public function getAllPagesForProductCategory(PageCategory $category, Category $productCategory, int $limit = 31)
     {
-        return $this->getAllPagesQuery()
+        return $this->getAllPagesSubCategoriesQuery()
             ->where('category_id', $productCategory->id)
-            ->where('page_category_id', $category->id)
             ->paginate($limit);
     }
 
@@ -53,6 +53,13 @@ class PageManager
     {
         return Page::where('is_published', true)
             ->orderBy('published_at', 'desc');
+
+    }
+
+    public function getAllPagesSubCategoriesQuery()
+    {
+        return GroupPageCategory::with('pages')
+            ->orderBy('name', 'desc');
 
     }
 }

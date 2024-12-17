@@ -15,6 +15,7 @@ class Page extends Model implements HasMedia
 
     protected $fillable = [
         'page_category_id',
+        'group_page_category_id',
         'title',
         'description',
         'slug',
@@ -37,5 +38,10 @@ class Page extends Model implements HasMedia
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function groupPageCategory(): BelongsTo
+    {
+        return $this->belongsTo(GroupPageCategory::class, 'group_page_category_id');
     }
 }
