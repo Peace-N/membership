@@ -44,23 +44,25 @@
         <x-section.column  class="w-full m:w-full md:w-full lg:w-6/12"  style="flex-basis: inherit;padding: 0.75rem;">
             <div
                 class="flex w-full flex-col rounded-2xl bg-cover px-[30px] py-[30px] md:px-[14px]"
-                style='background: radial-gradient(#e0f3fd, #d4e9f7); height: 100%'
+                style='height: 100%'
             >
                 <div class="w-full">
-                    <h4 class="mb-[14px] max-w-full text-xl font-light text-black md:text-3xl md:leading-[42px] ">
-                        Wurk Managed Services
+                    <div class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 30 30">
+                        <path d="M12 16L3 16 3 23.75 12 24.988zM12 5L3 6.25 3 14 12 14zM14 4.75L14 14 27 14 27 3zM14 16L14 25.25 27 27 27 16z"></path>
+                    </svg>
+                    <h4 class="mb-[14px] max-w-full text-xl font-semibold text-black md:text-3xl md:leading-38px] ">
+                        &nbsp;Discover Wurk Apps
                     </h4>
-                    <p class="mb-[40px] max-w-full text-base font-extralight text-[#696969] ">
-                        Managed IT services are defined as the practice of fully or partially outsourcing the migration, implementation, maintenance, and upgrade of the different parts of IT infrastructure (including backup and security) to a third-party vendor who typically operates remotely or from an offshore location.
-                    </p>
-                    <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
-                        <button class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
-                            Discover now
-                        </button>
-                        <button class="text-base font-medium text-lightPrimary hover:text-lightPrimary 2xl:ml-2">
-                            Watch Video
-                        </button>
                     </div>
+                    @foreach($portals as $portal)
+                    <a href="https://{{$portal->portal}}">
+                        <p style="    border-bottom: 1px solid #ccc;background: #f6f6f6;padding: 10px;"
+                           class="mb-[2px] max-w-full text-base font-medium text-[#696969] ">
+                            {{$portal->name}}
+                        </p>
+                    </a>
+                    @endforeach
                 </div>
             </div>
         </x-section.column>
