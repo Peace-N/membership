@@ -74,18 +74,15 @@
             >
                 <div class="w-full">
                     <h4 class="mb-[14px] max-w-full text-xl font-light text-black md:text-3xl md:leading-[42px] ">
-                        Wurk Self Service
+                        Managed or Self Managed Services
                     </h4>
                     <p class="mb-[40px] max-w-full text-base font-extralight text-[#696969] ">
-                        Enter in this creative world. Discover now the latest NFTs or start
-                        creating your own!
+                        All our Applications have self service and managed services, you can choose a DIY solution or
+                        we help and manage your services.
                     </p>
                     <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
-                        <button class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                        <button href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                             Discover now
-                        </button>
-                        <button class="text-base font-medium text-lightPrimary hover:text-lightPrimary 2xl:ml-2">
-                            Watch Video
                         </button>
                     </div>
                 </div>
@@ -99,15 +96,11 @@
                         Custom Software Development
                     </h4>
                     <p class="mb-[40px] max-w-full text-base font-extralight text-[#696969] ">
-                        Enter in this creative world. Discover now the latest NFTs or start
-                        creating your own!
+                        We develop custom software solutions tailored for your needs
                     </p>
                     <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
-                        <button class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                        <button href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                             Discover now
-                        </button>
-                        <button class="text-base font-medium text-lightPrimary hover:text-lightPrimary 2xl:ml-2">
-                            Watch Video
                         </button>
                     </div>
                 </div>
