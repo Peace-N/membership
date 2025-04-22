@@ -15,6 +15,7 @@ class Category extends Model
         'image',
         'name',
         'portal',
+        'selfmanaged',
     ];
 
     public function products(): HasMany

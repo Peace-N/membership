@@ -23,5 +23,7 @@
         @include('components.layouts.partials.tail')
     </div>
     <x-impersonate::banner/>
+
+    <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/david-ai@1.0.6/packages/dist/david-ai.min.js" defer></script>
 </body>
 </html>

@@ -33,7 +33,8 @@ class CategoryResource extends Resource
                         ->required()
                         ->maxLength(255),
                         Forms\Components\TextInput::make('portal')
-                        ->required()
+                        ->required(),
+                    Forms\Components\TextInput::make('selfmanaged')
                 ]),
                 ]);
     }
@@ -48,6 +49,7 @@ class CategoryResource extends Resource
                 Tables\Columns\IconColumn::make('icon')->icon(static fn (Model $record): string|null => $record->icon),
                 Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('portal')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('selfmanaged')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(config('app.datetime_format')),
             ])
