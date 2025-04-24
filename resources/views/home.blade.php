@@ -232,12 +232,12 @@
                 {{ __('Our support is just great !') }}
             </p>
             <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
-                <button class="text-white linear rounded-md bg-black px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                <a href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-white linear rounded-md bg-black px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                     Get Started
-                </button>
-                <button class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                </a>
+                <a href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                     Contact Sales
-                </button>
+                </a>
             </div>
         </x-section.column>
 

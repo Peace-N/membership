@@ -26,7 +26,7 @@
                                 </p>
                                 <div class="mt-[4px] flex items-center justify-between sm:justify-start 2xl:gap-4">
                                     @if($category->name === 'Domains')
-                                        <form action="https://hosting.wurk.africa/cart.php" class="w-full mt-[4px] flex items-center justify-between sm:justify-start 2xl:gap-4">
+                                        <form action="https://store.wurk.africa/cart.php" class="w-full mt-[4px] flex items-center justify-between sm:justify-start 2xl:gap-4">
                                             <input name="a" type="hidden" value="add" />
                                             <input name="domain" type="hidden" value="register" />
                                             <input name="systpl" type="hidden" value="hostiko" />
