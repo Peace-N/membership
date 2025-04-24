@@ -64,15 +64,15 @@
             <div class="mb-6 md:mb-0">
                 <div class="relative tab-group">
                     <div class="flex bg-stone-100 p-0.5 relative rounded-lg" role="tablist" >
-                        <div class="absolute shadow-sm top-1 left-0.5 h-8 bg-gray-200 rounded-md transition-all duration-300 transform scale-x-0 translate-x-0 tab-indicator z-0"></div>
-                        <a href="#" class="tab-link flex items-center text-sm active inline-block py-2 px-4 text-stone-800 transition-all duration-300 relative z-1 mr-1 " data-dui-tab-target="tabm3-group2">
+                        <div style="background: #64c9ff; height: 80%" class="absolute shadow-sm top-1 left-0.5 h-8 rounded-md transition-all duration-300 transform scale-x-0 translate-x-0 tab-indicator z-0"></div>
+                        <a href="#" class="tab-link flex items-center text-sm active inline-block py-2 px-4 text-white transition-all duration-300 relative z-1 mr-1 " data-dui-tab-target="tabm3-group2">
                             <svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="mr-2 h-4 w-4">
                                 <path d="M21 7.35304L21 16.647C21 16.8649 20.8819 17.0656 20.6914 17.1715L12.2914 21.8381C12.1102 21.9388 11.8898 21.9388 11.7086 21.8381L3.30861 17.1715C3.11814 17.0656 3 16.8649 3 16.647L2.99998 7.35304C2.99998 7.13514 3.11812 6.93437 3.3086 6.82855L11.7086 2.16188C11.8898 2.06121 12.1102 2.06121 12.2914 2.16188L20.6914 6.82855C20.8818 6.93437 21 7.13514 21 7.35304Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M3.52844 7.29357L11.7086 11.8381C11.8898 11.9388 12.1102 11.9388 12.2914 11.8381L20.5 7.27777" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M12 21L12 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M11.6914 11.8285L3.89139 7.49521C3.49147 7.27304 3 7.56222 3 8.01971V16.647C3 16.8649 3.11813 17.0656 3.30861 17.1715L11.1086 21.5048C11.5085 21.727 12 21.4378 12 20.9803V12.353C12 12.1351 11.8819 11.9344 11.6914 11.8285Z" fill="currentColor" stroke="currentColor" stroke-linejoin="round"></path>
                             </svg> Managed Services </a>
-                        <a href="#" class="tab-link flex items-center text-sm inline-block py-2 px-4 text-stone-800 transition-all duration-300 relative z-1 mr-1 " data-dui-tab-target="tabm4-group2">
+                        <a href="#" class="tab-link flex items-center text-sm inline-block py-2 px-4 text-white transition-all duration-300 relative z-1 mr-1 " data-dui-tab-target="tabm4-group2">
                             <svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="mr-2 h-4 w-4">
                                 <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M4.271 18.3457C4.271 18.3457 6.50002 15.5 12 15.5C17.5 15.5 19.7291 18.3457 19.7291 18.3457" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
