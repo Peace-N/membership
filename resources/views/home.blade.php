@@ -115,9 +115,9 @@
                         we help and manage your services.
                     </p>
                     <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
-                        <button href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                        <a href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                             Discover now
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -133,9 +133,9 @@
                         We develop custom software solutions tailored for your needs
                     </p>
                     <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
-                        <button href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                        <a href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                             Discover now
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -161,12 +161,12 @@
                         Our CRM solution harnesses the power of data to provide you with actionable insights into your customers' behaviors, preferences, and needs.
                     </p>
                     <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10 mb-4">
-                        <button class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                        <a href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                            Get Started
-                        </button>
-                        <button class="text-base font-medium text-lightPrimary hover:text-lightPrimary 2xl:ml-2">
+                        </a>
+                        <a href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-base font-medium text-lightPrimary hover:text-lightPrimary 2xl:ml-2">
                             Learn More
-                        </button>
+                        </a>
                     </div>
 
 
@@ -182,11 +182,11 @@
                                 Comprehensive features and fully loaded box.
                             </p>
                             <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
-                                <a href="{{'/pricing?source=home&product_touch=' . 'CRM' }}" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
-                                    Grab your Offer
+                                <a href="https://store.wurk.africa/index.php?m=product_page&pid=63&name=accounting-services" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                                    Managed CRM
                                 </a>
-                                <a href="https://crm.wurk.africa" class="text-base font-medium text-white hover:text-lightPrimary 2xl:ml-2">
-                                    {{'CRM' . ' Info'}}
+                                <a href="https://store.wurk.africa/index.php?m=product_page&pid=74&name=accounting" class="text-base font-medium text-white hover:text-lightPrimary 2xl:ml-2">
+                                    {{'CRM' . ' Self Managed'}}
                                 </a>
                             </div>
                         </div>

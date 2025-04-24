@@ -64,7 +64,7 @@
                                         its as easy ABC to get onboard. We are ready for you, are you ready?
                                     </p>
                                     <div class="mt-[36px] text-center flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
-                                        <a href="https://{{$category->portal}}" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                                        <a href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                                             Let's get started
                                         </a>
                                             <a href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-white linear rounded-md bg-black px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
