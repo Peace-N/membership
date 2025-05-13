@@ -15,7 +15,7 @@
             @if(auth()->user())
             <a href="/logout" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
             @else
-            <a href="https://store.wurk.africa/index.php/login" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign in</a>
+            <a href="https://store.wurkapps.com/index.php/login" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign in</a>
             @endif
         </div>
     </div>
@@ -28,7 +28,7 @@
 
 <a href="https://webstore.design" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">{{ __('Websites and Hosting') }}</a>
 <a href="https://crm.wurk.africa" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">{{ __('CRM') }}</a>
-<a href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">Store</a>
-<a href="https://store.wurk.africa/index.php/login" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">{{ __('Account Center') }}</a>
+<a href="https://store.wurkapps.com/index.php/store/wurk-apps" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">Store</a>
+<a href="https://store.wurkapps.com/index.php/login" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">{{ __('Account Center') }}</a>
 <a href="/page/category/support" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">{{ __('Help & Support') }}</a>
 

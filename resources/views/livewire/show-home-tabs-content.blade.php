@@ -26,7 +26,7 @@
                                 </p>
                                 <div class="mt-[4px] flex items-center justify-between sm:justify-start 2xl:gap-4">
                                     @if($category->name === 'Domains')
-                                        <form action="https://store.wurk.africa/cart.php" class="w-full mt-[4px] flex items-center justify-between sm:justify-start 2xl:gap-4">
+                                        <form action="https://store.wurkapps.com/cart.php" class="w-full mt-[4px] flex items-center justify-between sm:justify-start 2xl:gap-4">
                                             <input name="a" type="hidden" value="add" />
                                             <input name="domain" type="hidden" value="register" />
                                             <input name="systpl" type="hidden" value="hostiko" />
@@ -64,10 +64,10 @@
                                         its as easy ABC to get onboard. We are ready for you, are you ready?
                                     </p>
                                     <div class="mt-[36px] text-center flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
-                                        <a href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                                        <a href="https://store.wurkapps.com/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                                             Let's get started
                                         </a>
-                                            <a href="https://store.wurk.africa/index.php/store/wurk-apps" class="text-white linear rounded-md bg-black px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                                            <a href="https://store.wurkapps.com/index.php/store/wurk-apps" class="text-white linear rounded-md bg-black px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                                             See Apps
                                         </a>
                                     </div>

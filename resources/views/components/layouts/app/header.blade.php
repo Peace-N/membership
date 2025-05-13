@@ -196,9 +196,9 @@
                     <x-layouts.app.user-menu></x-layouts.app.user-menu>
                 @else
                     <x-link class="hidden md:block text-block text-bold"
-                            href="https://store.wurk.africa/index.php/login">{{ __('Sign in') }}</x-link>
+                            href="https://store.wurkapps.com/index.php/login">{{ __('Sign in') }}</x-link>
                     <x-button-link.secondary class="hidden xl:block" elementType="a"
-                                             href="https://store.wurk.africa/">{{ __('Get started') }}</x-button-link.secondary>
+                                             href="https://store.wurkapps.com/">{{ __('Get started') }}</x-button-link.secondary>
                 @endauth
             </div>
         </div>
