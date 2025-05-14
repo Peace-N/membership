@@ -16,7 +16,11 @@
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">About Wurk</a></li>
                     @foreach($aboutFooter->pages as $pages)
+                        @if($pages->slug === 'contact-us')
+                            <li class="text-xs mt-2"><a target="_blank" href="/page/category/support" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
+                        @else
                         <li class="text-xs mt-2"><a target="_blank" href="{{route('page.view', $pages->slug)}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
+                        @endif
                     @endforeach
                     <li class="text-xs mt-2"><a target="_blank" href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Blog') }}</a></li>
                     <li class="text-xs mt-2"><a target="_blank" href="{{route('page.category', 'legal')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Legal') }}</a></li>
@@ -47,7 +51,7 @@
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">Partner Programmes</a></li>
                     @foreach($affiliatesFooter->pages as $pages)
-                        <li class="text-xs mt-2"><a target="_blank" href="https://affiliates.wurk.africa" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
+                        <li class="text-xs mt-2"><a target="_blank" href="https://store.wurkapps.com/register.php" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
                     @endforeach
                 </ul>
             </div>
@@ -55,9 +59,9 @@
             <div class="mb-6 md:mb-0">
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">Account</a></li>
-                    <li class="text-xs mt-2"><a target="_blank" href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('My Products') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Billing & Subscriptions') }}</a></li>
-                    <li class="text-xs mt-2"><a href="{{route('blog')}}" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Become a Member') }}</a></li>
+                    <li class="text-xs mt-2"><a target="_blank" href="https://store.wurkapps.com/index.php/store/wurk-apps" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('My Products') }}</a></li>
+                    <li class="text-xs mt-2"><a href="https://store.wurkapps.com/index.php/login" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Billing & Subscriptions') }}</a></li>
+                    <li class="text-xs mt-2"><a href="https://store.wurkapps.com/index.php/register" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ __('Become a Member') }}</a></li>
                 </ul>
             </div>
 

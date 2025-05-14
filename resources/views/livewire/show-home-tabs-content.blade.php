@@ -61,13 +61,13 @@
                                     </h5>
                                     <p class="mb-[20px] md:text-sm max-w-full  font-extralight text-black ">
                                         At Wurk we have multiple Apps to automate Business needs, to get started see our list of apps
-                                        its as easy ABC to get onboard. We are ready for you, are you ready?
+                                        its as easy ABC to get onboard.
                                     </p>
-                                    <div class="mt-[36px] text-center flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
-                                        <a href="https://store.wurkapps.com/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                                    <div class="mt-[10px] text-center flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
+                                        <a href="https://store.wurkapps.com/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-normal transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                                             Let's get started
                                         </a>
-                                            <a href="https://store.wurkapps.com/index.php/store/wurk-apps" class="text-white linear rounded-md bg-black px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                                            <a href="https://store.wurkapps.com/index.php/store/wurk-apps" class="text-white linear rounded-md bg-black px-4 py-2 text-center text-base font-normal transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                                             See Apps
                                         </a>
                                     </div>
@@ -78,11 +78,11 @@
                                 style='background: radial-gradient(rgba(192,192,192,0.82), #ffffff)'
                             >
                                 <div class="w-full">
-                                    <h5 class="mb-[10px] max-w-full text-xl font-extralight text-black md:text-2xl md:leading-[30px] ">
+                                    <h6 class="mb-[10px] max-w-full text-lg font-extralight text-black md:text-2xl md:leading-[20px] ">
                                         In need of help and support?
-                                    </h5>
+                                    </h6>
                                     <div class="mt-[30px] text-center flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
-                                        <a href="/page/category/support" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                                        <a href="/page/category/support" class="text-black linear rounded-md bg-white px-4 py-1 text-center text-base font-light transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                                             See help desk
                                         </a>
                                     </div>
