@@ -111,7 +111,8 @@
                         Managed or Self Managed Services
                     </h4>
                     <p class="mb-[40px] max-w-full text-base font-extralight text-[#696969] ">
-                        All our Applications have self-service and managed services.
+                        All our Applications have self-service and managed services, you can choose a DIY solution or
+                        we help and manage your services.
 
                         On Managed services we handle the maintenance, updates, and management of a specific system or service, while self-managed services you are responsible for all aspects of management. This includes tasks like system administration, software updates, security patches, and troubleshooting.
                     </p>
