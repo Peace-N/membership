@@ -111,8 +111,9 @@
                         Managed or Self Managed Services
                     </h4>
                     <p class="mb-[40px] max-w-full text-base font-extralight text-[#696969] ">
-                        All our Applications have self service and managed services, you can choose a DIY solution or
-                        we help and manage your services.
+                        All our Applications have self-service and managed services.
+
+                        On Managed services we handle the maintenance, updates, and management of a specific system or service, while self-managed services you are responsible for all aspects of management. This includes tasks like system administration, software updates, security patches, and troubleshooting.
                     </p>
                     <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
                         <a href="https://store.wurkapps.com/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
