@@ -1,9 +1,9 @@
 
 <li>
-    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="text-md text-black font-400 flex py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 flex items-center justify-between w-full md:w-auto">Wurk Products <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+    <button id="dropdownNavbarLink"  data-collapse-toggle="dropdownNavbar" class="text-md text-black font-400 flex py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 flex items-center justify-between w-full md:w-auto">Wurk Products <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
     <!-- Dropdown menu -->
 
-    <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-150">
+    <div id="dropdownNavbar" style="position: absolute" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-150">
 
         <div class="relative tab-group">
             <div class="flex bg-stone-100 p-0.5 relative rounded-lg" role="tablist" style="    background: #f2f2f2;margin: 7px;">
@@ -63,4 +63,68 @@
 <a href="https://store.wurkapps.com/index.php/store/wurk-apps" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">Store</a>
 <a href="https://store.wurkapps.com/index.php/login" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">{{ __('Account Center') }}</a>
 <a href="/page/category/support" class="text-md font-400 block py-2 px-3 md:p-0 rounded hover:bg-primary-600 md:hover:bg-transparent md:hover:text-primry-500 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-black">{{ __('Help & Support') }}</a>
+<script>
+    import {Collapse} from "flowbite";
 
+    document.addEventListener("DOMContentLoaded", function () {
+        const collapseElement = document.getElementById("dropdownNavbar");
+        const collapseButton = document.querySelector("[data-collapse-toggle='dropdownNavbarLink']");
+        const collapse = new Collapse(collapseElement);
+
+
+        collapseButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            collapse.toggle();
+            const chevron = collapseButton.querySelector("svg");
+            chevron.classList.toggle("rotate-180");
+        });
+
+        const menuItems = collapseElement.querySelectorAll("a");
+        menuItems.forEach(item => {
+            item.addEventListener("click", function (event) {
+                event.stopPropagation();
+            });
+        });
+    });
+</script>
+{{--<script>--}}
+{{--    // set the dropdown menu element--}}
+{{--    const $targetEl = document.getElementById('dropdownNavbar');--}}
+
+{{--    // set the element that trigger the dropdown menu on click--}}
+{{--    const $triggerEl = document.getElementById('dropdownNavbarLink');--}}
+
+{{--    // options with default values--}}
+{{--    const options = {--}}
+{{--        placement: 'bottom',--}}
+{{--        triggerType: 'click',--}}
+{{--        offsetSkidding: 0,--}}
+{{--        offsetDistance: 10,--}}
+{{--        delay: 300,--}}
+{{--        ignoreClickOutsideClass: true,--}}
+{{--        onHide: () => {--}}
+{{--            console.log('dropdown has been hidden');--}}
+{{--        },--}}
+{{--        onShow: () => {--}}
+{{--            console.log('dropdown has been shown');--}}
+{{--        },--}}
+{{--        onToggle: () => {--}}
+{{--            console.log('dropdown has been toggled');--}}
+{{--        },--}}
+{{--    };--}}
+
+{{--    // instance options object--}}
+{{--    const instanceOptions = {--}}
+{{--        id: 'dropdownNavbar',--}}
+{{--        override: true--}}
+{{--    };--}}
+{{--    // import { Dropdown } from 'flowbite';--}}
+{{--    //--}}
+{{--    // /*--}}
+{{--    //  * $targetEl: required--}}
+{{--    //  * $triggerEl: required--}}
+{{--    //  * options: optional--}}
+{{--    //  * instanceOptions: optional--}}
+{{--    //  */--}}
+{{--    // const dropdown = new Dropdown($targetEl, $triggerEl, options, instanceOptions);--}}
+{{--</script>--}}
