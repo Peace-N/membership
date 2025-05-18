@@ -11,7 +11,6 @@
 <body class="text-primary-900 flex flex-col min-h-screen" x-data>
     <div id="app" class="flex flex-col flex-grow">
 {{--        <x-layouts.app.header class="flex-shrink-0"/>--}}
-
         <div class="flex-grow">
             <div class="mx-auto">
                 {{ $slot }}
@@ -20,7 +19,7 @@
 
         <x-layouts.app.footer class="flex-shrink-0" />
 
-{{--        @include('components.layouts.partials.tail')--}}
+        @include('components.layouts.partials.tail')
     </div>
 {{--    <x-impersonate::banner/>--}}
     <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/david-ai@1.0.6/packages/dist/david-ai.min.js" defer></script>
