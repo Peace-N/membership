@@ -9,6 +9,7 @@
     @include('components.layouts.partials.head')
 </head>
 <body class="text-primary-900 flex flex-col min-h-screen" x-data>
+<script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
     <div id="app" class="flex flex-col flex-grow">
 {{--        <x-layouts.app.header class="flex-shrink-0"/>--}}
         <div class="flex-grow">
