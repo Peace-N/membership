@@ -50,7 +50,8 @@
         <div class="mx-auto w-10/12 px-20 p-4 py-8 lg:py-8">
             <div class="grid" style="display: grid;grid-template-columns: 1fr 1fr 1fr 1fr;row-gap: 20px;padding: 30px 0;margin: 0;">
                 @foreach($portals as $category)
-                    <a class="text-black hover:text-gray-500" href="/page/category/support?product_category={{$category->portal}}">
+{{--                    <a class="text-black hover:text-gray-500" href="/page/category/support?product_category={{$category->portal}}">--}}
+                    <a class="text-black hover:text-gray-500" href="https://store.wurkapps.com/store/wurk-apps">
                     <div class=p-1" style="display: flex; flex-direction: column; max-width: 120px; text-align: center">
                         <span style="width: 60px; height: 60px; margin: 10px auto; display:block">{{ svg($category->icon) }}</span>
                         <span style="display: block">{{$category->name}}</span>
