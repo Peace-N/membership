@@ -163,19 +163,22 @@
 {{--            @endauth--}}
 {{--        </div>--}}
 {{--    </div>--}}
-</nav>
+{{--</nav>--}}
 
 <!-- This is an example component -->
 
     <nav class="border-gray-200">
         <div class="navbar max-w-full mx-auto w-full px-0  lg:px-20 	bg-base-100 text-primary-50 justify-between">
-            <div class="navbar-start w-6/12 ml-1">
+            <div class="navbar-start w-full ml-1">
                             <div class="dropdown">
                                 <div tabindex="0" role="button" class="btn btn-ghost text-black lg:hidden">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                                 </div>
-                                <ul class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow lg:hidden">
-                                    <x-layouts.app.navigation-links-mobile></x-layouts.app.navigation-links-mobile>
+{{--                                <ul class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow lg:hidden">--}}
+{{--                                    <x-layouts.app.navigation-links-mobile></x-layouts.app.navigation-links-mobile>--}}
+{{--                                </ul>--}}
+                                <ul class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-auto p-2 shadow lg:hidden">
+                                        <x-layouts.app.navigation-links-mobile></x-layouts.app.navigation-links-mobile>
                                 </ul>
                             </div>
                 <a href="/" class="flex">
@@ -195,10 +198,10 @@
                 @auth
                     <x-layouts.app.user-menu></x-layouts.app.user-menu>
                 @else
-                    <x-link class="hidden md:block text-block text-bold"
-                            href="https://store.wurkapps.com/index.php/login">{{ __('Sign in') }}</x-link>
-                    <x-button-link.secondary class="hidden xl:block" elementType="a"
-                                             href="https://store.wurkapps.com/index.php/store/wurk-apps">{{ __('Get started') }}</x-button-link.secondary>
+{{--                    <x-link class="hidden md:block text-block text-bold"--}}
+{{--                            href="https://store.wurkapps.com/index.php/login">{{ __('Sign in') }}</x-link>--}}
+{{--                    <x-button-link.secondary class="hidden xl:block" elementType="a"--}}
+{{--                                             href="https://store.wurkapps.com/index.php/store/wurk-apps">{{ __('Get started') }}</x-button-link.secondary>--}}
                 @endauth
             </div>
         </div>
