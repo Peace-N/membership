@@ -55,6 +55,24 @@ class PageController extends Controller
             ]);
 
         }
+
+        if($slug === 'affiliates') {
+
+            return view('page.affiliate', [
+                'category' => $category,
+                'posts' => $this->pageManager->getAllPagesForCategory($category),
+            ]);
+
+        }
+
+        if($slug === 'resellers') {
+
+            return view('page.reseller', [
+                'category' => $category,
+                'posts' => $this->pageManager->getAllPagesForCategory($category),
+            ]);
+
+        }
         return view('page.category', [
             'category' => $category,
             'posts' => $this->pageManager->getAllPagesForCategory($category),

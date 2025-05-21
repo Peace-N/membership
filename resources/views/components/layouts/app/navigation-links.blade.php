@@ -36,8 +36,10 @@
                                             </div>
                                             <div class="ml-4 w-4/5">
                                                 <h6 class="text-gray-900 text-base mb-1.5 font-semibold"> {{$portal->name}}</h6>
-                                                @foreach($portal->products as $product)
-                                                    <p class="text-xs font-medium text-gray-400"> {{$product->description ? substr($product->description, 0,  20) : ''}}</p>
+                                                @foreach($portal->products as $key => $product)
+                                                    @if($key == 0)
+                                                    <p class="text-xs font-medium text-gray-400"> {{$product->description}}</p>
+                                                    @endif
                                                 @endforeach
                                             </div>
                                         </a>
@@ -58,8 +60,10 @@
                                             </div>
                                             <div class="ml-4 w-4/5">
                                                 <h6 class="text-gray-900 text-base mb-1.5 font-semibold">Self Managed {{$portal->name}}</h6>
-                                                @foreach($portal->products as $product)
-                                                    <p class="text-xs font-medium text-gray-400"> {{$product->description ? substr($product->description, 0,  20) : ''}}</p>
+                                                @foreach($portal->products as $key => $product)
+                                                    @if($key == 0)
+                                                    <p class="text-xs font-medium text-gray-400"> {{$product->description}}</p>
+                                                    @endif
                                                 @endforeach
                                             </div>
                                         </a>

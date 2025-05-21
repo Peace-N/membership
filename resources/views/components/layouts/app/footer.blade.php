@@ -50,9 +50,10 @@
             <div class="mb-6 md:mb-0">
                 <ul class="flex flex-col text-sm mt-2 mb-2">
                     <li class="text-sm mb-1 text-gray-300"><a href="#">Partner Programmes</a></li>
-                    @foreach($affiliatesFooter->pages as $pages)
-                        <li class="text-xs mt-2"><a target="_blank" href="https://store.wurkapps.com/register.php" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">{{ $pages->title  }}</a></li>
-                    @endforeach
+{{--                    @foreach($affiliatesFooter->pages as $pages)--}}
+                        <li class="text-xs mt-2"><a target="_blank" href="/page/category/affiliates" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">Affiliates</a></li>
+                        <li class="text-xs mt-2"><a target="_blank" href="/page/category/resellers" class="text-gray-400 dark:text-gray-400 hover:text-primary-50">Resellers</a></li>
+{{--                    @endforeach--}}
                 </ul>
             </div>
 

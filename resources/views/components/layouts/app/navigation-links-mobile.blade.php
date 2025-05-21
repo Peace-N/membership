@@ -4,7 +4,7 @@
         </svg>
     </button>
     <!-- Dropdown menu -->
-    <div style="top: 63px" id="full-width-megamenu-mobile" aria-labelledby="full-width-megamenu-mobile" class="dropdown-menu animate-fade z-10  lg:absolute top-full left-0 right-0 m-auto bg-white rounded-lg shadow-[0px_15px_30px_0px_rgba(16,24,40,0.1)] lg:px-12 xl:px-12 md:px-12 p-12 max-w-screen-2xl xl:py-12 lg:12-4 md:py-2l  ">
+    <div style="top: 63px" id="full-width-megamenu-mobile" aria-labelledby="full-width-megamenu-mobile" class="dropdown-menu animate-fade z-10  lg:absolute top-full left-0 right-0 m-auto bg-white rounded-lg shadow-[0px_15px_30px_0px_rgba(16,24,40,0.1)] lg:px-12 xl:px-12 md:px-12 p-12 max-w-screen-2xl xl:py-12 lg:12-4 md:py-2l hidden">
         <div>
             <div class="relative tab-group">
                 <div class="flex bg-stone-100 p-0.5 relative rounded-lg" role="tablist" style="    background: #000;margin: 7px;">
@@ -36,8 +36,10 @@
                                                 </div>
                                                 <div class="ml-4 w-4/5">
                                                     <h6 class="text-gray-900 text-base mb-1.5 font-semibold"> {{$portal->name}}</h6>
-                                                    @foreach($portal->products as $product)
-                                                        <p class="text-xs font-medium text-gray-400"> {{$product->description ? substr($product->description, 0,  20) : ''}}</p>
+                                                    @foreach($portal->products as $key => $product)
+                                                        @if($key == 0)
+                                                            <p class="text-xs font-medium text-gray-400"> {{$product->description}}</p>
+                                                        @endif
                                                     @endforeach
                                                 </div>
                                             </a>
@@ -58,8 +60,10 @@
                                             </div>
                                             <div class="ml-4 w-4/5">
                                                 <h6 class="text-gray-900 text-base mb-1.5 font-semibold">Self Managed {{$portal->name}}</h6>
-                                                @foreach($portal->products as $product)
-                                                    <p class="text-xs font-medium text-gray-400"> {{$product->description ? substr($product->description, 0,  20) : ''}}</p>
+                                                @foreach($portal->products as $key => $product)
+                                                    @if($key == 0)
+                                                    <p class="text-xs font-medium text-gray-400"> {{$product->description}}</p>
+                                                    @endif
                                                 @endforeach
                                             </div>
                                         </a>
