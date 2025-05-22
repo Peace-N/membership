@@ -29,7 +29,7 @@
             </div>
         </x-section.column>
 
-        <x-section.column class="w-1/3 pt-20 pb-20" style="background-size:cover !important; padding-top: 7rem; padding-bottom: 7rem; background: url({{URL::asset('/images/reseller.jpg')}})">
+        <x-section.column class="w-1/3 pt-20 pb-20 hidden lg:block" style="background-size:cover !important; padding-top: 7rem; padding-bottom: 7rem; background: url({{URL::asset('/images/reseller.jpg')}})">
             <div x-intersect="$el.classList.add('slide-in-top')">
                 <x-heading.h6 class="text-black font-light">
 {{--                    <small class="font-extralight">Amanda Santos</small> <br /> <small>Sales Manager</small>--}}
@@ -40,7 +40,7 @@
 
 
     </x-section.columns>
-    <div class="text-center pt-4 pb-0 md:pt-16 md:mb-10">
+    <div class="text-center pt-4 p-4 pb-0 md:pt-16 md:mb-10">
         <x-heading.h1 class="font-extralight">
             Resell Everything on Wurk
         </x-heading.h1>
@@ -54,8 +54,8 @@
 
 {{--    <x-blog.post-cards :posts="$posts" />--}}
 
-        <div class="mx-auto w-10/12 px-20 p-4 py-8 lg:py-8">
-            <div class="grid" style="display: grid;grid-template-columns: 1fr 1fr 1fr 1fr;row-gap: 20px;padding: 30px 0;margin: 0;">
+        <div class="mx-auto w-10/12 px-4 p-4 py-8 lg:py-8">
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 " style="row-gap: 20px;padding: 30px 0;margin: 0;">
                 @foreach($portals as $category)
 {{--                    <a class="text-black hover:text-gray-500" href="/page/category/support?product_category={{$category->portal}}">--}}
                     <a style="margin: 10px; background: #000" class="text-white hover:text-gray-500 hover:bg-[#1f2937]/90" href="https://store.wurkapps.com/store/wurk-apps">

@@ -38,7 +38,7 @@
 
 
     </x-section.columns>
-    <div class="text-center pt-4 pb-0 md:pt-16 md:mb-10">
+    <div class="text-center pt-4 p-4 pb-0 md:pt-16 md:mb-10">
         <x-heading.h1 class="font-extralight">
            Find Product help
         </x-heading.h1>
@@ -47,11 +47,11 @@
 
 {{--    <x-blog.post-cards :posts="$posts" />--}}
 
-        <div class="mx-auto w-10/12 px-20 p-4 py-8 lg:py-8">
-            <div class="grid" style="display: grid;grid-template-columns: 1fr 1fr 1fr 1fr;row-gap: 20px;padding: 30px 0;margin: 0;">
+        <div class="mx-auto w-10/12 px-4 p-4 py-8 lg:py-8">
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 " style="row-gap: 20px;padding: 30px 0;margin: 0;">
                 @foreach($portals as $category)
-{{--                    <a class="text-black hover:text-gray-500" href="/page/category/support?product_category={{$category->portal}}">--}}
-                    <a class="text-black hover:text-gray-500" href="https://store.wurkapps.com/store/wurk-apps">
+                    <a class="text-black hover:text-gray-500" href="/page/category/support?product_category={{$category->portal}}">
+{{--                    <a class="text-black hover:text-gray-500" href="https://store.wurkapps.com/store/wurk-apps">--}}
                     <div class=p-1" style="display: flex; flex-direction: column; max-width: 120px; text-align: center">
                         <span style="width: 60px; height: 60px; margin: 10px auto; display:block">{{ svg($category->icon) }}</span>
                         <span style="display: block">{{$category->name}}</span>
