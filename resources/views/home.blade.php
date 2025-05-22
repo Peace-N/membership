@@ -58,7 +58,7 @@
 
                     <div class="relative tab-group">
                         <div class="flex bg-stone-100 p-0.5 relative rounded-lg" role="tablist">
-                            <div style="background: #64c9ff; height: 80%" class="absolute shadow-sm top-1 left-0.5 h-8 rounded-md transition-all duration-300 transform scale-x-0 translate-x-0 tab-indicator z-0"></div>
+                            <div style="background: #6366f1; height: 80%" class="absolute shadow-sm top-1 left-0.5 h-8 rounded-md transition-all duration-300 transform scale-x-0 translate-x-0 tab-indicator z-0"></div>
                             <a href="#" class="tab-link flex items-center text-sm active inline-block py-2 px-4 text-black transition-all duration-300 relative z-1 mr-1" data-dui-tab-target="tab1-group2">
                                 <svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="mr-2 h-4 w-4">
                                     <path d="M21 7.35304L21 16.647C21 16.8649 20.8819 17.0656 20.6914 17.1715L12.2914 21.8381C12.1102 21.9388 11.8898 21.9388 11.7086 21.8381L3.30861 17.1715C3.11814 17.0656 3 16.8649 3 16.647L2.99998 7.35304C2.99998 7.13514 3.11812 6.93437 3.3086 6.82855L11.7086 2.16188C11.8898 2.06121 12.1102 2.06121 12.2914 2.16188L20.6914 6.82855C20.8818 6.93437 21 7.13514 21 7.35304Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -75,24 +75,50 @@
                         </div>
                         <div class="mt-4 tab-content-container">
                             <div id="tab1-group2" class="tab-content text-stone-500 text-sm block">
-                                @foreach($portals as $portal)
-                                    <a href="https://{{$portal->portal}}">
-                                        <p style="    border-bottom: 1px solid #ccc;background: #f6f6f6;padding: 10px;"
-                                           class="mb-[2px] max-w-full text-base font-medium text-[#696969] ">
-                                            {{$portal->name}}
-                                        </p>
-                                    </a>
-                                @endforeach
+{{--                                @foreach($portals as $portal)--}}
+{{--                                    <a href="https://{{$portal->portal}}">--}}
+{{--                                        <p style="    border-bottom: 1px solid #ccc;background: #f6f6f6;padding: 10px;"--}}
+{{--                                           class="mb-[2px] max-w-full text-base font-medium text-[#696969] ">--}}
+{{--                                            {{$portal->name}}--}}
+{{--                                        </p>--}}
+{{--                                    </a>--}}
+{{--                                @endforeach--}}
+
+                                    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 " style="row-gap: 20px;padding: 30px 0;margin: 0; padding-top:0">
+                                        @foreach($portals as $category)
+                                            {{--                    <a class="text-black hover:text-gray-500" href="/page/category/support?product_category={{$category->portal}}">--}}
+                                            <a style="margin: 10px; background: #000" class="text-white hover:text-gray-500 hover:bg-[#1f2937]/90" href="https://{{$category->portal}}">
+                                                <div class=p-1" style="display: flex; flex-direction: column; max-width: 120px; text-align: center">
+                                                    <span style="width: 60px; height: 60px; margin: 10px auto; display:block">{{ svg($category->icon) }}</span>
+                                                    <span style="display: block">{{$category->name}}</span>
+                                                    <hr style="display: block;margin: 0.45rem auto 0.7rem auto;width: 50px;height: 3px;background-image: linear-gradient(to right, rgba(201,4,255,0.82), #649d01);"></hr>
+                                                </div>
+                                            </a>
+                                        @endforeach
+                                    </div>
                             </div>
                             <div id="tab2-group2" class="tab-content text-stone-500 text-sm hidden">
-                                @foreach($portals as $portal)
-                                    <a href="https://{{$portal->selfmanaged}}">
-                                        <p style="    border-bottom: 1px solid #ccc;background: #f6f6f6;padding: 10px;"
-                                           class="mb-[2px] max-w-full text-base font-medium text-[#696969] ">
-                                            Self Managed {{$portal->name}}
-                                        </p>
-                                    </a>
-                                @endforeach
+{{--                                @foreach($portals as $portal)--}}
+{{--                                    <a href="https://{{$portal->selfmanaged}}">--}}
+{{--                                        <p style="    border-bottom: 1px solid #ccc;background: #f6f6f6;padding: 10px;"--}}
+{{--                                           class="mb-[2px] max-w-full text-base font-medium text-[#696969] ">--}}
+{{--                                            Self Managed {{$portal->name}}--}}
+{{--                                        </p>--}}
+{{--                                    </a>--}}
+{{--                                @endforeach--}}
+
+                                    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 " style="row-gap: 20px;padding: 30px 0;margin: 0; padding-top:0">
+                                        @foreach($portals as $category)
+                                            {{--                    <a class="text-black hover:text-gray-500" href="/page/category/support?product_category={{$category->portal}}">--}}
+                                            <a style="margin: 10px; background: #643e7a" class="text-white hover:text-gray-500 hover:bg-[#1f2937]/90" href="https://{{$category->selfmanaged}}">
+                                                <div class=p-1" style="display: flex; flex-direction: column; max-width: 120px; text-align: center">
+                                                    <span style="width: 60px; height: 60px; margin: 10px auto; display:block">{{ svg($category->icon) }}</span>
+                                                    <span style="display: block">Self Managed {{$category->name}}</span>
+                                                    <hr style="display: block;margin: 0.45rem auto 0.7rem auto;width: 50px;height: 3px;background-image: linear-gradient(to right, rgb(0,183,0), #ffab2e);"></hr>
+                                                </div>
+                                            </a>
+                                        @endforeach
+                                    </div>
                             </div>
                         </div>
                     </div>
