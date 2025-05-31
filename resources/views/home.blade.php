@@ -161,7 +161,7 @@
                         Commercial information services provide companies with data and analysis to help them make better business decisions, manage risks, and improve performance. These services offer a range of tools and insights, from market research and financial reporting to risk assessment and due diligence.
                     </p>
                     <div class="mt-[36px] flex items-center justify-between gap-4 sm:justify-start 2xl:gap-10">
-                        <a href="https://store.wurkapps.com/index.php/store/wurk-apps" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
+                        <a href="https://commercial.wurkapps.com" class="text-black linear rounded-md bg-white px-4 py-2 text-center text-base font-medium transition duration-200 hover:!bg-white/80 active:!bg-white/70">
                             Discover now
                         </a>
                     </div>
