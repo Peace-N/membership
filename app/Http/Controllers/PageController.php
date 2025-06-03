@@ -73,6 +73,7 @@ class PageController extends Controller
             ]);
 
         }
+
         return view('page.category', [
             'category' => $category,
             'posts' => $this->pageManager->getAllPagesForCategory($category),

@@ -52,7 +52,7 @@ class PageManager
     public function getAllPagesQuery()
     {
         return Page::where('is_published', true)
-            ->orderBy('published_at', 'desc');
+            ->orderBy('title', 'asc');
 
     }
 
