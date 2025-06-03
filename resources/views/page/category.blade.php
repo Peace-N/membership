@@ -39,7 +39,9 @@
                         UAE</p>
                     </li>
                     <li class="text-sm mb-1 text-gray-300"><a href="#">Telephone:</a></li>
-                    <li class="text-sm mb-1 text-gray-300"><a href="#">Support:</a></li>
+                    <li class="text-sm mb-1 text-gray-300"><a href="#">Support:</a>
+                    <p class="text-black">support@wurkapps.com</p>
+                    </li>
                 </ul>
             </div>
 
@@ -56,5 +58,8 @@
         </div>
 
     </div>
+    <!-- Not required if jQuery is already loaded -->
+    <script src="https://support.wurk.africa/js/min/jquery.min.js"></script>
+    <script id="sbinit" src="https://support.wurk.africa/js/main.js"></script>
 
 </x-layouts.app>
