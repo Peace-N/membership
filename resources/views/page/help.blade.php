@@ -78,7 +78,12 @@
                         Corporate Information
                     </x-heading.h3>
                     <ul class="flex flex-col text-sm mt-2 mb-2">
-                            <li class="text-sm mb-1 text-gray-300"><a href="#">Address:</a></li>
+                            <li class="text-sm mb-1 text-gray-300"><a href="#">Address:</a>
+                                <p class="text-black">Meydan Grandstand, 6th Floor<br />
+                                    Meydan Road, Nad Al Sheba<br />
+                                    Dubai<br />
+                                    UAE</p>
+                            </li>
                             <li class="text-sm mb-1 text-gray-300"><a href="#">Telephone:</a></li>
                             <li class="text-sm mb-1 text-gray-300"><a href="#">Support:</a></li>
                     </ul>
