@@ -25,5 +25,8 @@
     <x-impersonate::banner/>
     <script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/david-ai@1.0.6/packages/dist/david-ai.min.js" defer></script>
+    <!-- Not required if jQuery is already loaded -->
+    <script src="https://support.wurk.africa/js/min/jquery.min.js"></script>
+    <script id="sbinit" src="https://support.wurk.africa/js/main.js"></script>
 </body>
 </html>
