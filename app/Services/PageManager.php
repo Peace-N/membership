@@ -29,20 +29,20 @@ class PageManager
             ->get();
     }
 
-    public function getAllPages(int $limit = 31)
+    public function getAllPages(int $limit = 100)
     {
         return $this->getAllPagesQuery()
             ->paginate($limit);
     }
 
-    public function getAllPagesForCategory(PageCategory $category, int $limit = 31)
+    public function getAllPagesForCategory(PageCategory $category, int $limit = 100)
     {
         return $this->getAllPagesQuery()
             ->where('page_category_id', $category->id)
             ->paginate($limit);
     }
 
-    public function getAllPagesForProductCategory(PageCategory $category, Category $productCategory, int $limit = 31)
+    public function getAllPagesForProductCategory(PageCategory $category, Category $productCategory, int $limit = 100)
     {
         return $this->getAllPagesSubCategoriesQuery()
             ->where('category_id', $productCategory->id)
