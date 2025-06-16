@@ -58,8 +58,5 @@
         </div>
 
     </div>
-    <!-- Not required if jQuery is already loaded -->
-    <script src="https://support.wurk.africa/js/min/jquery.min.js"></script>
-    <script id="sbinit" src="https://support.wurk.africa/js/main.js"></script>
 
 </x-layouts.app>

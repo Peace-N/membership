@@ -1,33 +1,4 @@
-{{-- <nav class="relative bg-primary-500 text-white border-gray-200 dark:bg-gray-900">
-    <div class="navbar max-w-screen-xl items-center mx-auto">
-        <div class="navbar-start">
-            <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden me-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </div>
-                <ul tabindex="0" class="menu menu-lg dropdown-content mt-3 z-[1] p-2 border border-primary-50 shadow-2xl shadow-primary-500/50 bg-primary-500 rounded-box w-52">
-                    <x-layouts.app.navigation-links></x-layouts.app.navigation-links>
-                </ul>
-            </div>
-            <a href="/" class="flex justify-center items-center">
-                <img src="{{asset(config('app.logo.light') )}}" class="h-6" alt="Logo" />
-            </a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-            <x-nav>
-                <x-layouts.app.navigation-links></x-layouts.app.navigation-links>
-            </x-nav>
-        </div>
-        <div class="navbar-end">
-            @auth
-                <x-layouts.app.user-menu></x-layouts.app.user-menu>
-            @else
-                <x-link class="hidden md:block text-primary-50" href="{{route('login')}}">{{ __('Login') }}</x-link>
-                <x-button-link.secondary elementType="a" href="#pricing">{{ __('Get started') }}</x-button-link.secondary>
-            @endauth
-        </div>
-    </div>
-</nav> --}}
+
 <style>
 
   /* ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -130,81 +101,96 @@
   /*.navbar-start {width: 25% !important}*/
   /*.navbar-end {width: 25% !important}*/
 
+  .rounded-menu-links {
+      background: #fff;
+      margin: 10px;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 8px 32px rgba(0, 0, 0, 0.08) !important;
+      border-radius: 28px !important;
+      height:100%;
+  }
+
+  .menu-links:active {
+      background-image: linear-gradient(to right, #918ef5, #3ff5e4) !important;
+      border-radius: 28px !important;
+      color: white !important;
+  }
+
+  .hi .active {background-image: linear-gradient(to right, #918ef5, #3ff5e4) !important;
+      border-radius: 28px !important;
+      color: white !important;}
+
+  .menu-links:hover {
+      background-image: linear-gradient(to right, #3ff5e4, #918ef5);
+      border-radius: 28px;
+      color: white;
+  }
+
+
+  .menu-links .hover:hover,   .menu-links .active:active
+  {
+      --tw-bg-opacity: 1;
+      background-color: #028be5;
+      background-image: linear-gradient(to right, #3ff5e4, #918ef5);
+      border-radius: 28px;
+      color: white;
+      padding:10px;
+  }
+
+  .menu :where(li ul) {
+      position: relative;
+      white-space: nowrap;
+      margin-inline-start: 0;
+      padding-inline-start: 0;
+  }
+
+  .menu :where(li ul):before {
+      display:none
+  }
+
   </style>
-
-{{--<nav class="relative bg-white text-white border-gray-200 dark:bg-gray-900">--}}
-{{--    <div class="navbar max-w-full mx-auto px-20	bg-base-100 text-primary-50">--}}
-{{--        <div class="navbar-start">--}}
-{{--            <div class="dropdown">--}}
-{{--                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">--}}
-{{--                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>--}}
-{{--                </div>--}}
-{{--                <ul class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">--}}
-{{--                    <x-layouts.app.navigation-links></x-layouts.app.navigation-links>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-{{--            <a href="/" class="flex justify-left items-left">--}}
-{{--                <img src="{{asset(config('app.logo.dark') )}}" class="h-6" alt="Logo" />--}}
-{{--            </a>--}}
-{{--        </div>--}}
-
-
-{{--        <div class="navbar-center hidden lg:flex">--}}
-{{--            <x-nav>--}}
-{{--                <x-layouts.app.navigation-links></x-layouts.app.navigation-links>--}}
-{{--            </x-nav>--}}
-{{--        </div>--}}
-{{--        <div class="navbar-end">--}}
-{{--            @auth--}}
-{{--                <x-layouts.app.user-menu></x-layouts.app.user-menu>--}}
-{{--            @else--}}
-{{--                <x-link class="hidden md:block text-block text-bold" href="{{route('login')}}">{{ __('Sign in') }}</x-link>--}}
-{{--                <x-button-link.secondary elementType="a" href="#pricing">{{ __('Get started') }}</x-button-link.secondary>--}}
-{{--            @endauth--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</nav>--}}
-
 <!-- This is an example component -->
+<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 
     <nav class="border-gray-200">
-        <div class="navbar max-w-full mx-auto w-full px-0  lg:px-20 	bg-base-100 text-primary-50 justify-between">
+        <div class="navbar max-w-full mx-auto w-full px-0  lg:px-20 block lg:flex  bg-base-100 text-primary-50 justify-between">
             <div class="navbar-start w-full ml-1">
                             <div class="dropdown">
-                                <div tabindex="0" role="button" class="btn btn-ghost text-black lg:hidden">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                                <div class="flex justify-items-start content-center w-100" style="align-items: baseline;">
+                                    <button onmouseover="" id="dropdownNavbarLink" data-target="ham-menu" class="dropdown-toggle flex
+            items-center justify-between text-md font-400 block py-2 px-3 btn btn-ghost text-black lg:hidden">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                                    </button>
+                                    <div>
+                                        <img src="{{asset(config('app.logo.dark') )}}" class="h-6" alt="Logo"/>
+                                    </div>
                                 </div>
 {{--                                <ul class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow lg:hidden">--}}
 {{--                                    <x-layouts.app.navigation-links-mobile></x-layouts.app.navigation-links-mobile>--}}
 {{--                                </ul>--}}
-                                <ul class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-auto p-2 shadow lg:hidden">
+                                <ul class="flex-col md:flex-row flex  w-100 lg:hidden">
                                         <x-layouts.app.navigation-links-mobile></x-layouts.app.navigation-links-mobile>
                                 </ul>
                             </div>
-                <a href="/" class="flex">
-                    <img src="{{asset(config('app.logo.dark') )}}" class="h-6" alt="Logo"/>
-                </a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
-
                     <x-nav>
                         <x-layouts.app.navigation-links></x-layouts.app.navigation-links>
                     </x-nav>
-
                 </ul>
             </div>
-            <div class="navbar-end w-6/12 mr-1">
-                @auth
-                    <x-layouts.app.user-menu></x-layouts.app.user-menu>
-                @else
+{{--            <div class="navbar-end w-6/12 mr-1">--}}
+{{--                @auth--}}
+{{--                    <x-layouts.app.user-menu></x-layouts.app.user-menu>--}}
+{{--                @else--}}
 {{--                    <x-link class="hidden md:block text-block text-bold"--}}
 {{--                            href="https://store.wurkapps.com/index.php/login">{{ __('Sign in') }}</x-link>--}}
 {{--                    <x-button-link.secondary class="hidden xl:block" elementType="a"--}}
 {{--                                             href="https://store.wurkapps.com/index.php/store/wurk-apps">{{ __('Get started') }}</x-button-link.secondary>--}}
-                @endauth
-            </div>
+{{--                @endauth--}}
+{{--            </div>--}}
         </div>
     </nav>
 
-<script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+{{--<script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>--}}
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
